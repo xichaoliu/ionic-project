@@ -1,0 +1,18 @@
+
+<div class="sw-head">
+  <span class="bc" (tap)="back()">
+      <i class="iconfont icon-fanhui"></i>
+  </span>
+  <span>切换城市</span>
+</div>
+<div class="sw-content">
+  <div class="sw-cont">
+    <div class="sw-gps">
+      <span class="gps-city">{{gpsCity}}</span>
+      <span class="gps-rem">GPS</span>
+    </div>
+    <div class="sw-city-list" *ngIf="options">
+      <div class="city-item" *ngFor="let o of options" (tap)="sendCity(o)">{{o.regional_name}}</div>
+    </div>
+  </div>
+</div>

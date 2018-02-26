@@ -1,0 +1,84 @@
+page-taste {
+  #tasteBox{
+    width:10rem;
+    margin:0 auto;
+    height:100%;
+    color:#9e894b;
+    font-family: '宋体';
+    .meTbox{
+      width:100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      .tastTit{
+        width:100%;
+        height:px2em(180px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button{
+          width:px2em(595px);
+          height:px2em(93px);
+          border:1px solid #9e894b;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: transparent;
+          color:#9e894b;
+          @include font-dpr(14px);
+          font-weight: 600;
+          border-radius: px2em(50px);
+        }
+      }
+      #navTit{
+        width:100%;
+        z-index: 2;
+        background:rgba(0,0,0,.5);
+        position: absolute;
+        top:px2em(180px);
+        display: none;
+        .meng{
+          padding:px2em(40px);
+          background: url("../assets/imgs/2.png") repeat;
+          background-size: 0.0966rem 0.0966rem;
+          display: flex;
+          flex-wrap: wrap;
+          li{
+            width:px2em(374px);
+            height:px2em(164px);
+            background: #262626;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include font-dpr(14px);
+            margin-right: px2em(20px);
+            margin-bottom: px2em(20px);
+          }
+          li:nth-child(3n){
+            margin-right:0;
+          }
+        }
+
+      }
+    }
+    .tasteList{
+      width:100%;
+      padding: 0 px2em(40px);
+      box-sizing:border-box;
+      overflow: hidden;
+      li{
+        width:100%;
+        //height:px2em(300px);
+        margin-bottom: px2em(40px);
+
+      }
+      .loadtxt{
+        @include font-dpr(14px);
+        text-align: center;
+        color: #9e894b;
+        margin: px2em(20px);
+      }
+    }
+
+  }
+}

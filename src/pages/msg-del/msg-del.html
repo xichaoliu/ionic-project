@@ -1,0 +1,30 @@
+<!--
+  Generated template for the MsgDelPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div class="body">
+    <div class="msg_box">
+      <div class="msg_back">
+         <div class="redelTit">
+           <i class="iconfont icon-fanhui" (tap)="toBack()"></i>
+           <span>消息</span>
+         </div>
+   
+      </div>
+      <div class="msg_list" *ngIf="msglist">
+          <div class="msgtext">
+              <div class="msgtitle">【消息通知】</div>
+              <span>{{msglist.createtime}}</span>
+            
+            </div>
+            <div class="msgtextbox">
+              <div class="msgtextcontent">
+                 {{msglist.content}}
+              </div>
+            </div>
+         
+      </div>
+    </div>
+   </div>

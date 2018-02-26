@@ -1,0 +1,12 @@
+<!-- Generated template for the MsgTextComponent component -->
+<div class="msgtext">
+  <span>{{msglist.createtime}}</span>
+
+</div>
+<div class="msgtextbox" *ngIf="msglist">
+  <div class="msgtitle">【{{msglist.titile}}】</div>
+ 
+  <div class="msgtextcontent">
+      {{msglist.content}}
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="placeDel" *ngIf="placedel">
+  <div class="plaTop">
+    <div class="placeTit"><i class="iconfont icon-fanhui" (tap)="toBack()"></i></div>
+    <div class="plaImg"><img src="{{placedel.pic}}" alt=""/></div>
+    <div class="placeName">{{placedel.name}}</div>
+    <div class="plaFocus" *ngIf="placedel.collect == 0"><span (tap)="isCollect(placedel.id)">关 注</span></div>
+    <div class="plaFocus noFous" *ngIf="placedel.collect == 1"><span (tap)="noCollect(placedel.collection_id)">已关注</span></div>
+    <!--nav-->
+    <ul class="placeNav">
+      <li *ngFor="let item of placeNav,let i = index" [class.pActive]=" plaIndex == i" (tap)="changeNav(i)">{{item.tit}}</li>
+    </ul>
+  </div>
+  <ion-content>
+    <div id="heiCon">
+      <!--简介-->
+      <div class="plaIntro" *ngIf="plaIndex==0">
+        <ul class="introList">
+          <li><div class="add">开放时间</div>：{{placedel.workat}}~{{placedel.closingtime}}</li>
+          <li><div class="add">电&emsp;&emsp;话</div>：{{placedel.phone}}</li>
+          <li><div class="add">地&emsp;&emsp;址</div>：{{placedel.address}}</li>
+        </ul>
+        <ul class="introList">
+          <li><div class="add">微&emsp;&emsp;信</div>：{{placedel.official_num?placedel.official_num:'暂无'}}</li>
+          <li><div class="add">微&emsp;&emsp;博</div>：{{placedel.micro_blog?placedel.micro_blog:'暂无'}}</li>
+          <li><div class="add">邮&emsp;&emsp;箱</div>：{{placedel.email?placedel.email:'暂无'}}</li>
+        </ul>
+        <div class="introP">简&emsp;&emsp;介：<div [innerHTML]="placedel.info"></div></div>
+      </div>
+      <!--活动-->
+      <ul class="plaAct" *ngIf="plaIndex==1">
+        <li (tap)="toActDel(i.id)" *ngFor="let i of actList">
+          <activity-list [actList]="i"></activity-list>
+        </li>
+      </ul>
+      <!--品味-->
+      <ul class="plaTaste" *ngIf="plaIndex==2">
+        <li (tap)="toTastDel(i.id)" *ngFor="let i of tasteList">
+          <see-hear [tasteList]="i"></see-hear>
+        </li>
+      </ul>
+      <!--空间-->
+      <ul class="plaTaste" *ngIf="plaIndex==3">
+        <li (tap)="toSpaceDel(i.id)" *ngFor="let i of spaceList">
+          <space-list [spaceList]="i"></space-list>
+        </li>
+      </ul>
+    </div>
+  </ion-content>
+
+</div>

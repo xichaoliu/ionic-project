@@ -1,0 +1,8 @@
+<!-- Generated template for the MapLandscapeComponent component -->
+<div class="land-item map-box" *ngIf="item" (click)="toLandDel(item.id)">
+  <div class="land-img">
+    <img src="{{item.pic}}" alt="">
+  </div>
+ <p class="land-title land-text">{{item.title}}</p>
+  <p class="land-distance land-text">{{distance2 || item.distance}}km <i (click)="toNav1(item.coordinates);$event.stopPropagation();" *ngIf="isGps"></i></p>
+</div>

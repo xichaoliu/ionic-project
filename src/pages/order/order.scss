@@ -1,0 +1,32 @@
+page-order {
+    .actDetail{
+        width: 10rem;
+    }
+    .msg_box{
+        height: 100%;
+        width: 100%;
+        font-weight: bold;
+    }
+    .redelTit {
+       width: 100%;
+       height: px2em(130px);
+       display: flex;
+       font-weight: 600;
+       justify-content: center;
+       align-items: center;
+       position: relative;
+       background: #272727;
+       i {
+         color: #9e894b;
+         position: absolute;
+         left: px2em(50px);
+         top:px2em(30px);
+         @include font-dpr(16px);
+       }
+     }
+      .redelTit span{
+        color: #9e894b;
+        @include font-dpr(16px);
+      }
+
+}

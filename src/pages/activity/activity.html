@@ -1,0 +1,46 @@
+ 
+<div class="activeBox">
+  <div class="actTop">
+    <ul class="oul">
+      <li (tap)="toActOnline(0)">
+        <div class="smbox">
+          <i class="iconfont icon-zhibo"></i>
+          <dl>
+            <dt>活动在线</dt>
+            <dd>Activity Online</dd>
+          </dl>
+        </div>
+      </li>
+      <li (tap)="toCalendar()">
+        <div class="smbox">
+          <i class="iconfont icon-rili"></i>
+          <dl>
+            <dt>日 历</dt>
+            <dd>Calender</dd>
+          </dl>
+        </div>
+      </li>
+      <li (tap)="toActOnline(1)">
+        <div class="smbox">
+          <i class="iconfont icon-huigu"></i>
+          <dl >
+            <dt>回 顾</dt>
+            <dd>Review</dd>
+          </dl>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <act-navdel [toNav]="navIndex" (recAct)="resActCla($event)" ></act-navdel>
+  <ul class="listBox">
+    <li (tap)="toActDel(i.id)" *ngFor="let i of actList">
+      <activity-list [actList]="i"></activity-list>
+    </li>
+    <p class="loadtxt">{{msg}}</p>
+  </ul>
+</div>
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles"
+                                 loadingText="数据加载中..."></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+ 

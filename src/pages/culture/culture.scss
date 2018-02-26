@@ -1,0 +1,16 @@
+page-culture {
+  #cul_body .add{
+    width: 10rem;
+    height: 2.09rem;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    //margin-top:2.3rem;
+  }
+  .loadtxt{
+    @include font-dpr(14px);
+    text-align: center;
+    color: #9e894b;
+    margin: px2em(20px);
+  }
+}

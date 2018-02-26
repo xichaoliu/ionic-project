@@ -1,0 +1,101 @@
+page-search {
+    .listBox{
+      width: 10rem;
+    margin: 0 auto;
+    padding: 0.32206rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+      li{
+        height: auto;
+        overflow: hidden;
+        padding: px2em(10px) 0px;
+      }
+      .newslist{
+        width: auto;
+      }
+      .activty_mask{
+        width: auto;
+      }
+    }
+    .actDetail{
+        width:10rem;
+        margin:0 auto;
+        font-family: '宋体';
+        height:100%;
+        background: url("../assets/imgs/2.png") repeat;
+        background-size: 0.0966rem 0.0966rem;
+        .adelTit{
+          width:100%;
+          height: px2em(130px);
+          background: #272727;
+          display: flex;
+           
+          align-items: center;
+           
+          box-sizing: border-box;
+          //font-weight: 600;
+          color:#9e894b;
+          @include font-dpr(16px);
+          i{
+            color:#9e894b;
+            @include font-dpr(16px);
+          }
+    
+        }
+    }
+    .placeNav{
+        width:10rem;
+        margin:px2em(50px) auto 0;
+        height:px2em(150px);
+        background: #9e894b;
+        padding-top:px2em(3px);
+        box-sizing: border-box;
+        display: flex;
+        li{
+          flex: 1;
+          height:100%;
+          font-weight: 600;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color:#272727;
+          @include font-dpr(16px);
+        }
+        .pActive{
+          background: #272727;
+          color:#9e894b;
+        }
+      }
+     .search {
+        width: px2em(892px);
+        height: 0.6924rem;
+        line-height: 0.6924rem;
+        background: #4d4d4d;
+        border-radius: 2.8rem;
+    }
+    .search input{
+       color: #272727;
+       border: 0px;
+      height: 0.6924rem;
+      line-height: 0.6924rem;
+      background: none;
+      margin-left: px2em(10px);
+      
+  }
+    .search i {
+        color: #272727 !important;
+        @include font-dpr(16px);
+        margin-left: 0.2415rem;
+        float: left;
+    }
+    .searchicon{
+      width: px2em(145px);
+      text-align: center;
+    }
+    .searchbtn{
+      width: px2em(200px);
+      text-align: center;
+      color: #fff;
+    }
+}

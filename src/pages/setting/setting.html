@@ -1,0 +1,38 @@
+<!--
+  Generated template for the SettingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div class="body">
+  <div class="setting">
+  <div class="msg_box">
+      <div class="msg_back">
+          <div class="redelTit">
+            <div class="otit" (tap)="toBack()"><i class="iconfont icon-fanhui"></i></div>
+            <span>设置</span>
+          </div>
+
+       </div>
+  </div>
+  <div class="settingline">
+      <div class="settingbox" (tap)="open_genggai(4)">
+        更改手机号
+      </div>
+      <div class="settingbox" (tap)="open_xiugaimima(1)">
+          修改密码
+        </div>
+        <div class="settingbox" (tap)="open_huancun(2)">
+            清理缓存
+          </div>
+          <div class="settingbox" (tap)="open_tuichu(3)">
+              退出登录
+            </div>
+    </div>
+  </div>
+
+</div>
+<!--蒙版-->
+<div *ngIf="isMess">
+    <bombbox (messBox)="messShow($event)" [id]='idnum'></bombbox>
+</div>

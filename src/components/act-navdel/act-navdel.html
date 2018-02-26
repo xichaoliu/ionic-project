@@ -1,0 +1,11 @@
+<!-- Generated template for the ActNavdelComponent component -->
+<!--nav导航-->
+<div class="swiper-container">
+  <!--活动列表-->
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let item of navList, let i = index" (click)="getData(item.id)" [class.active]="item.id == actIndex">
+      <span >{{item.name}}</span>
+    </div>
+  </div>
+</div>
+

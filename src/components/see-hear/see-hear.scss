@@ -1,0 +1,51 @@
+
+see-hear {
+    .newslist{
+        width: 9.3559rem;
+        margin: px2em(40px) auto px2em(55px) auto;
+        position: relative;
+    }
+  .newstitle{
+    background: #262626;
+    color: #fff;
+    height:1.75rem;
+
+    border-bottom: 0.024rem solid #4c4c4c;
+  }
+  .newstitlebox{
+    width: px2em(798px);
+    float: left;
+    @include font-dpr(16px);
+     margin-left: px2em(34px);
+     margin-top:px2em(50px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .newspic{
+    height:auto;
+    overflow: hidden;
+    clear: both;
+  }
+  .newsauthor{
+    color: #9e894b;
+    margin-top:0.12rem;
+    float:right;
+    margin-right:2.60rem;
+    @include font-dpr(14px);
+  }
+  .newssmallpic{
+    position: absolute;
+    right: 0.24rem;
+    top: 0.24rem;
+    width: 2.09rem;
+    height: 2.09rem;
+  }
+  .newssmallpic img{
+    width: 2.09rem;
+    height: 2.09rem;
+    background: #272727;
+  }
+}

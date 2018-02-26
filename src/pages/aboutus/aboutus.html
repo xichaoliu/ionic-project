@@ -1,0 +1,31 @@
+
+ <div class="body">
+  <div class="abox" >
+  <div class="msg_box">
+      <div class="msg_back">
+            <div class="redelTit">
+              <div class="otit" (tap)="toBack()"><i class="iconfont icon-fanhui"></i></div>
+              <span>关于我们</span>
+            </div>
+        </div>
+    </div>
+   <div class="aboutbox">
+     <div class="aboutimg">
+        <img src="assets/imgs/logo.png">
+        <div class="aboutcode"><span>当前版本号：V {{version}}</span></div>
+      </div>
+     <div class="newcode">
+       <div class="newleft">新版本检测</div>
+       <div class="newright" (tap)="update()">检测</div>
+     </div>
+     <!-- <div class="newcode">
+        <div class="newleft">技术支持</div>
+
+      </div>
+      <div class="newcode">
+          <div class="newleft">APP声明及法律</div>
+
+        </div> -->
+   </div>
+  </div>
+ </div>

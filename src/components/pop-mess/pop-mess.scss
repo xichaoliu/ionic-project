@@ -1,0 +1,61 @@
+pop-mess {
+  .popMess{
+    width:10rem;
+    margin:0 auto;
+    height:100%;
+    background: rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0;
+    .messBox{
+      width:px2em(896px);
+      height:px2em(530px);
+      background: #978447;
+      border-radius: px2em(20px);
+      display: flex;
+      flex-direction: column;
+      .messTit{
+        width:100%;
+        height:px2em(380px);
+        border-bottom: px2em(1px) solid #ddd;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p{
+          color:#000;
+          font-weight: 600;
+          @include font-dpr(16.7px);
+          margin-bottom: px2em(70px);
+        }
+        p:nth-child(2){
+          color:#fffffd;
+          @include font-dpr(15.3px);
+
+        }
+      }
+      .messBtn{
+        flex:1;
+        display: flex;
+        font-weight: 600;
+        @include font-dpr(14.6px);
+        p{
+          flex: 1;
+          color:#fffffd;
+          border-right: px2em(1px) solid #ddd;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        p:nth-child(2){
+          border-right: none;
+          color:#f2dfa0;
+        }
+
+      }
+    }
+
+  }
+}

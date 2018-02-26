@@ -1,0 +1,22 @@
+<div class="tasApSub">
+  <div class="tasSubTit"><div class="otit" (tap)="toBack()"><i class="iconfont icon-fanhui"></i></div>说点什么</div>
+  <div id="tasApSubBody">
+    <ul *ngIf="tastValueList">
+      <li *ngFor="let i of tastValueList">
+        <div class="appraiseBox">
+          <div class="userPhoto"><img src="{{i.profile}}" alt=""/></div>
+          <div class="userApprai">
+            <dl class="appodl">
+              <dt>{{i.nickname}} <span>{{i.createtime}}</span></dt>
+            </dl>
+            <p class="oappCon">{{i.content}}</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="wonderful">
+      <input type="text" placeholder="说点什么..." [(ngModel)]="tastValue"/>
+      <span (tap)="subValue()">发布</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,261 @@
+page-act-detail {
+  .actDetail{
+    width:10rem;
+    margin:0 auto;
+    font-family: '宋体';
+    height:100%;
+    background: url("../assets/imgs/2.png") repeat;
+    background-size: 0.0966rem 0.0966rem;
+    .adelTit{
+      width:100%;
+      height: px2em(130px);
+      background: #272727;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 px2em(50px);
+      box-sizing: border-box;
+      //font-weight: 600;
+      color:#9e894b;
+      @include font-dpr(16px);
+      .otit{
+        width:px2em(100px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height:100%;
+        i{
+          color:#9e894b;
+          @include font-dpr(16px);
+        }
+      }
+    }
+    #actdelBody{
+      overflow: scroll;
+      padding-bottom: px2em(240px);
+    }
+    .titcon{
+      width:100%;
+      padding:px2em(20px) px2em(40px);
+      box-sizing: border-box;
+      .titdel{
+        width:100%;
+        overflow: hidden;
+        background: #272727;
+        border-bottom: px2em(4px) solid #9e894b;
+        position: relative;
+        .oImg{
+          width:100%;
+          height:px2em(500px);
+        }
+        .status{
+          position: absolute;
+          top:px2em(50px);
+          right:0;
+          width:px2em(310px);
+          height:px2em(100px);
+          display: flex;
+          align-items: center;
+          background: rgba(0,0,0,.7);
+          color:white;
+          @include font-dpr(14px);
+          justify-content: center;
+          border-radius: px2em(50px) 0 0 px2em(50px);
+          i{
+            width:px2em(36px);
+            height:px2em(36px);
+            border-radius: 50%;
+            background: #5fd600;
+            margin-right: px2em(22px);
+          }
+        }
+        .titP{
+          width:100%;
+          overflow: hidden;
+          padding:px2em(40px);
+          box-sizing: border-box;
+          @include font-dpr(17px);
+          //line-height: 68px;
+          color:#fff;
+          font-weight: 600;
+          letter-spacing: px2em(4px);
+        }
+      }
+    }
+    .adeIntro{
+      padding:px2em(50px) px2em(70px) 0;
+      overflow: hidden;
+      font-family: 'yahei';
+      li{
+        margin-bottom: px2em(22px);
+        display: flex;
+        color:#9e894b;
+        @include font-dpr(14px);
+        i{
+          @include font-dpr(18px);
+          margin-left: px2em(40px);
+          color:white;
+        }
+      }
+      .noReser{
+        text-decoration:line-through
+      }
+    }
+    .plaLabel{
+      padding:0 px2em(40px);
+      .labDel{
+        width:100%;
+        height:px2em(264px);
+        padding-left: px2em(40px);
+        box-sizing: border-box;
+        background: #9e894b;
+        display: flex;
+        .labelImg{
+          width:px2em(186px);
+          height:px2em(186px);
+          background: #262626;
+          margin-top: px2em(29px);
+          margin-right: px2em(40px);
+          position: relative;
+          img{
+            width:px2em(184px);
+            height:px2em(184px);
+            position: absolute;
+            top:px2em(20px);
+            left: px2em(20px);
+            border:1px solid #9e894b;
+            background: white;
+          }
+        }
+        p{
+          flex: 1;
+          height:100%;
+          display: flex;
+          align-items: center;
+          @include font-dpr(17px);
+          color:#252525;
+          font-weight: 600;
+        }
+        .obtn{
+          width:px2em(270px);
+          height:100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          button{
+            width:px2em(190px);
+            height:px2em(78px);
+            background: #272727;
+            color:#9e894b;
+            font-family: 'yahei';
+            @include font-dpr(12px);
+            border-radius: px2em(40px);
+          }
+        }
+      }
+    }
+    .acdelp{
+      padding:px2em(40px) px2em(80px);
+      p{
+        //line-height: px2em(66px);
+        font-family: 'yahei';
+        @include font-dpr(14.6px);
+        color:#999;
+        text-indent:px2em(93px);
+      }
+    }
+    .acdelImg{
+      padding:0 px2em(40px);
+      img{
+        width:100%;
+      }
+    }
+    .warn{
+      padding:px2em(60px) px2em(110px);
+      .warnTit{
+        width:100%;
+        height:px2em(85px);
+        display: flex;
+        justify-content: center;
+        @include font-dpr(16px);
+        font-weight: 600;
+        color:#9e894b;
+      }
+      .warnCon{
+        width:100%;
+        padding:px2em(50px) px2em(64px);
+        box-sizing: border-box;
+        background: #272727;
+        border-bottom: px2em(2px) solid #9e894b;
+        li{
+          margin-bottom: px2em(20px);
+          p{
+            font-family: 'yahei';
+            @include font-dpr(13px);
+            color:#9e894b;
+            i{
+              @include font-dpr(9px);
+              display: inline-block;
+              color:#989898;
+              margin-right: px2em(30px);
+            }
+          }
+        }
+        li:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+    .botBtn{
+      width:100%;
+      position: fixed;
+      bottom: 0;
+      padding-bottom: px2em(60px);
+      display: flex;
+      justify-content: center;
+      button{
+        width:px2em(500px);
+        height:px2em(160px);
+        display: flex;
+        background: #9e894b;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p:nth-child(1){
+          color:#262626;
+          font-weight: 600;
+          @include font-dpr(18px);
+          margin-bottom: px2em(11px);
+        }
+        p:nth-child(2){
+          color:#c6ae68;
+          font-weight: 600;
+          @include font-dpr(13px);
+        }
+      }
+    }
+    .wonderful{
+      width:100%;
+      position: fixed;
+      bottom: 0;
+      height:px2em(160px);
+      overflow: hidden;
+      background: #9e894b;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p:nth-child(1){
+        color:#262626;
+        font-weight: 600;
+        @include font-dpr(18px);
+        //margin-bottom: px2em(11px);
+      }
+      p:nth-child(2){
+        color:#c6ae68;
+        font-weight: 600;
+        @include font-dpr(13px);
+      }
+    }
+  }
+}

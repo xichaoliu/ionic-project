@@ -1,0 +1,113 @@
+page-aboutus {
+    .abox{
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+    }
+    .msg_box {
+
+        width: 100%;
+        font-weight: bold;
+
+    }
+    .msg_back {
+        width: 100%;
+    }
+    .redelTit {
+        width: 100%;
+        height: px2em(130px);
+        display: flex;
+        font-weight: 600;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background: #272727;
+      .otit {
+        width: px2em(100px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        position: absolute;
+        left: px2em(50px);
+        i {
+          color: #9e894b;
+          @include font-dpr(16px);
+        }
+      }
+    }
+    .redelTit span {
+        color: #9e894b;
+        @include font-dpr(16px);
+    }
+    .yijianbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .yijianinput{
+        width: px2em(1162px);
+        textarea{
+            background: #9e894b;
+            color: #554c28;
+            width: 100%;
+            @include font-dpr(14px);
+            padding: px2em(20px);
+            height: px2em(800px);
+            margin-top:px2em(40px);
+        }
+    }
+.aboutbox{
+    display: flex;
+  flex-direction: column;
+  width: 10rem;
+  align-items: center;
+
+}
+.aboutimg{
+    display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: px2em(180px);
+  margin-bottom: px2em(180px);
+}
+.aboutcode{
+    @include font-dpr(16px);
+    color: #93894b;
+    margin-top: px2em(80px);
+}
+.newcode{
+    height: px2em(180px);
+    width: 10rem;
+    margin-bottom: px2em(20px);
+    display: flex;
+    justify-content: space-between;
+
+  align-items: center;
+    color: #93894b;
+    background: #272727;
+    @include font-dpr(16px);
+}
+.newleft{
+    width:px2em(430px);
+    height: px2em(100px);
+    display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left:px2em(60px);
+    border-left:solid #93894b px2em(10px);
+}
+.newright{
+    width: px2em(194px);
+    border: #93894b solid px2em(3px);
+    color:#93894b;
+    height: px2em(84px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: px2em(100px);
+    margin-right: px2em(90px);
+}
+}

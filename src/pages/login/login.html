@@ -1,0 +1,26 @@
+
+<div class="loginbox">
+  <div class="loginmask">
+      <div class="loginclose" (click)="visitor()"><i class="iconfont icon-xianguangjiantou"></i> 闲 逛</div>
+      <div class="logincenter">
+        <div class="logininput">
+          <div class="line">
+            <input type="text" placeholder="昵称/手机号" [(ngModel)]="phoneValue">
+          </div>
+          <div class="line m-10 wangji">
+            <input type="password" placeholder="密码" [(ngModel)]="pwValue">
+            <div class="codelogin" (tap)="wangji();">忘记密码</div>
+        </div>
+          <div class="loginok">
+            <div class="logintxt" (tap)="login()">
+                登&emsp;录
+            </div>
+          </div>
+        </div>
+        <div class="loginbottom">
+           <div class="loginbottomtxt" (tap)="regist();"> 注册</div>
+          </div>
+      </div>
+
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<!--活动在线-->
+<div class="actOnline" *ngIf="title=='0' && activList">
+  <div class="onlineTit">
+    <div class="otit" (tap)="toBack()"><i class="iconfont icon-fanhui"></i></div>
+    活动在线
+  </div>
+  <act-navdel  [toNav]="onnavIndex" (recAct)="resActClaOn($event)"></act-navdel>
+  <ul class="listBox" id="onlineBox" *ngIf="activList">
+    <li (tap)="toVideo(i.id)" *ngFor="let i of activList">
+      <activity-list [actList]="i"></activity-list>
+    </li>
+  </ul>
+</div>
+
+
+
+<!--回顾-->
+<div class="actOnline" *ngIf="title=='1' && activList">
+  <div class="onlineTit"> <div class="otit" (tap)="toBack()"><i class="iconfont icon-fanhui"></i></div>回 顾</div>
+  <act-navdel [toNav]="backnavIndex" (recAct)="resActClaB($event)"></act-navdel>
+  <ul class="listBox" id="backBox" *ngIf="activList">
+    <li (tap)="toActDel(i.id)" *ngFor="let i of activList">
+      <activity-list [actList]="i"></activity-list>
+    </li>
+  </ul>
+</div>

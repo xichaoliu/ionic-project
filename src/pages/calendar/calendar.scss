@@ -1,0 +1,186 @@
+page-calendar {
+  background: url("../assets/imgs/2.png") repeat;
+  background-size: 0.0966rem 0.0966rem;
+  div.calTit{
+    width:100%;
+    height: px2em(130px);
+    background: #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color:#9e894b;
+    font-family: '宋体';
+    @include font-dpr(16px);
+    position: relative;
+    i{
+      color:#9e894b;
+      position: absolute;
+      left:px2em(50px);
+      top:px2em(25px);
+      @include font-dpr(16px);
+    }
+  }
+  div.calendar{
+    width: 100%;
+    //overflow: hidden;
+    @include font-dpr(13.3px);
+    font-family: '宋体';
+    font-weight: bold;
+    background: #9e884c;
+    overflow: hidden;
+    position: relative;
+    .year{
+      display: flex;
+      display: -webkit-flex; /* Safari */
+      width: 100%;
+      height: px2em(102px);
+      justify-content: space-between;
+      align-items: center;
+      color: #262827;
+      background: #9e884c;
+      position: absolute;
+      top: 0;
+      z-index:1;
+      span{
+        display: flex;
+        display: -webkit-flex; /* Safari */
+        width: px2em(102px);
+        height: px2em(102px);
+        justify-content: center;
+        align-items: center;
+        i{
+          @include font-dpr(13.3px);
+        }
+      }
+    }
+    .week{
+      display: flex;
+      display: -webkit-flex; /* Safari */
+      width: 100%;
+      height: px2em(102px);
+      background: #9e884c;
+      position: absolute;
+      top: px2em(102px);
+      z-index:1;
+      span{
+        display: flex;
+        display: -webkit-flex; /* Safari */
+        color: #ccb56f;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .date{
+      width: 100%;
+      overflow: hidden;
+      position: absolute;
+      top: px2em(204px);
+      background: #9e884c;
+      .day{
+        display: flex;
+        display: -webkit-flex; /* Safari */
+        width: 100%;
+        height: px2em(120px);
+        justify-content: space-around;
+        align-items: center;
+        span{
+          display: flex;
+          display: -webkit-flex; /* Safari */
+          width: px2em(102px);
+          height: px2em(102px);
+          border-radius: px2em(102px);
+          justify-content:center;
+          align-items: center;
+          color: #d7bf79;
+        }
+        .chosed{
+          background:#b59d57;
+        }
+        .actived{
+          color: #ffffff !important;
+        }
+        .passed{
+          color: #676767;
+        }
+      }
+    }
+  }
+  div.rela_con{
+      width: 100%;
+      color: #ff2266;
+      @include font-dpr(14px);
+      overflow: hidden;
+      position: absolute;
+      background: url("../assets/imgs/2.png") repeat;
+      background-size: 0.0966rem 0.0966rem;
+      .note{
+        width: 100%;
+        padding-top: px2em(30px);
+        font-family: '宋体';
+        font-weight: bold;
+        @include font-dpr(14px);
+        color: #666;
+        display: flex;
+        justify-content: center;
+      }
+      .act-title{
+        width: 100%;
+        min-height: px2em(50px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top:px2em(70px);
+        margin-bottom: px2em(40px);
+        .act-tit{
+          font-family: '宋体';
+          font-weight: bold;
+          @include font-dpr(16px);
+          color:#fff;
+          padding: 0 px2em(40px);
+        }
+        .icon{
+          display: inline-block;
+          width: px2em(264px);
+          min-height: px2em(50px);
+        }
+        .icon-left{
+          background: url("../assets/imgs/act-left.png") center no-repeat;
+          background-size: contain;
+        }
+        .icon-right{
+          background: url("../assets/imgs/act-right.png") center no-repeat;
+          background-size: contain;
+        }
+      }
+      #act-drag{
+        width: 100%;
+        overflow: hidden;
+      }
+      .act-list-container{
+        width: 100%;
+        height: px2em(1515px);
+        overflow: scroll;
+        .act-list{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          overflow: hidden;
+          margin-bottom: px2em(120px);
+          li{
+            width:px2em(1162px);
+            height:px2em(650px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border:px2em(2px) solid #9e894b;
+            border-radius: px2em(30px);
+            margin-bottom: px2em(40px);
+            overflow: hidden;
+          }
+        }
+
+      }
+    }
+}

@@ -1,0 +1,125 @@
+page-activity {
+  .activeBox{
+    width:100%;
+    overflow: hidden;
+    font-family: '宋体';
+    background: url("../assets/imgs/2.png") repeat;
+    background-size: 0.0966rem 0.0966rem;
+    .actTop{
+      overflow: hidden;
+      padding:0.32rem;
+      .oul{
+        width:100%;
+        height:2.1rem;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        li{
+          background: #272727;
+          width:2.09rem;
+          height:100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .smbox{
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            i{
+              color:#9e894b;
+              @include font-dpr(36px);
+              margin-right: .4rem;
+
+              font-weight:normal;
+            }
+            dl{
+              font-weight: 600;
+              dt{
+                @include font-dpr(15px);
+                color:#9e894b;
+              }
+              dd{
+                @include font-dpr(12px);
+                color:#4d4d4d;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+        li:nth-child(1) {
+          width:4.52rem;
+          flex-direction: row;
+          .smbox{
+            flex-direction: row;
+            dl{
+              margin-top: .1rem;
+            }
+            dt{
+              margin-bottom: .09rem;
+            }
+          }
+        }
+        li:nth-child(2){
+          .smbox{
+            flex-direction: column;
+            align-items: center;
+            i{
+              margin-right: 0;
+              @include font-dpr(30px);
+
+            }
+          }
+          dl{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include line-height(14px);
+          }
+        }
+        li:nth-child(3){
+          .smbox{
+            flex-direction: column;
+            align-items: center;
+            i{
+              margin-right: 0;
+              @include font-dpr(30px);
+
+            }
+          }
+          dl{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include line-height(16px);
+          }
+        }
+      }
+    }
+    .listBox{
+      width:10rem;
+      margin:0 auto;
+      padding:px2em(40px);
+      box-sizing:border-box;
+      overflow: hidden;
+      li{
+        width:100%;
+        height:px2em(650px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border:px2em(2px) solid #9e894b;
+        border-radius: px2em(30px);
+        margin-bottom: px2em(40px);
+
+      }
+       .loadtxt{
+        @include font-dpr(14px);
+        text-align: center;
+        color: #9e894b;
+        margin: px2em(20px);
+      }
+    }
+
+  }
+
+}

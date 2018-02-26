@@ -1,0 +1,14 @@
+{
+  "name": "shandong",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies": [
+    {
+      "path": "/",
+      "proxyUrl": "http://119.188.168.250/"
+    }
+  ]
+}

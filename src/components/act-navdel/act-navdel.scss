@@ -1,0 +1,44 @@
+act-navdel {
+  /*nav导航*/
+  .swiper-container {
+    //width:100%;
+    height: 1.12rem;
+    background: #272727;
+    padding:0 .24rem;
+    position: relative;
+    display: flex;
+    .rigM{
+      //width:.32rem;
+      height:100%;
+      position: absolute;
+      top:0;
+      right:0;
+      background: rgba(39,39,39,.5);
+    }
+  }
+  .swiper-slide {
+    width:auto !important;
+    color:#666;
+    padding: px2em(30px) px2em(45px);
+    font-weight: 600;
+    text-align: center;
+    @include font-dpr(16px);
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .active{
+    color:#9e894b;
+  }
+
+}

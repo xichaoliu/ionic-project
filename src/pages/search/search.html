@@ -1,0 +1,49 @@
+<!--
+  Generated template for the SearchPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<div class="actDetail">
+  <div class="adelTit">
+    <div class="searchicon" (tap)="toBack()">
+      <i class="iconfont icon-fanhui"></i>
+    </div>
+    <div class="search">
+      <i class="iconfont icon-sousuo"></i>
+      <input type="text" placeholder="找点什么..."   [(ngModel)]="keywords"/>
+    </div>
+    <div class="searchbtn" (tap)="doserach()">搜索</div>
+  </div>
+   <!--nav-->
+   <ul class="placeNav">
+    <li *ngFor="let item of placeNav,let i = index" [class.pActive]=" plaIndex == i" (tap)="changeNav(i)">{{item.tit}}</li>
+  </ul>
+  <ion-content>
+  <!--活动-->
+  <ul class="listBox" *ngIf="plaIndex==0">
+   <li *ngFor="let item of actList" (tap)="toActDel(item.id)">
+    <activity-list [actList]='item'></activity-list>
+   </li>
+  </ul>
+  <!--品味-->
+  <ul class="plaAct" *ngIf="plaIndex==1">
+      <li *ngFor="let item of tasteList" (tap)="toTastDel(item.id)">
+        <see-hear [tasteList]='item'></see-hear>
+      </li>
+  </ul>
+  <!--景点-->
+  <ul class="plaTaste" *ngIf="plaIndex==2">
+    <li *ngFor="let i of item">
+      <map-landscape [item]='i'></map-landscape>
+    </li>
+  </ul>
+  <!--场馆-->
+  <ul class="plaTaste" *ngIf="plaIndex==3">
+    <li *ngFor="let item of guanzhulist" (tap)="toplaceDel(item.sid,item.type)">
+      <venue [guanzhulist]='item'></venue>
+    </li>
+  </ul>
+</ion-content>
+</div>

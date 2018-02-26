@@ -1,0 +1,49 @@
+<!--
+  Generated template for the ShoucangjiaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div class="actDetail">
+    <div class="msg_box">
+        <div class="msg_back">
+            <div class="redelTit">
+              <div class="otit" (tap)="toBack()"><i class="iconfont icon-fanhui"></i></div>
+              <span>收藏夹</span>
+            </div>
+
+         </div>
+    </div>
+     <!--nav-->
+     <ul class="placeNav">
+      <li *ngFor="let item of placeNav,let i = index" [class.pActive]=" plaIndex == i" (tap)="changeNav(i)">{{item.tit}}</li>
+    </ul>
+  <ion-content>
+    <!--活动-->
+    <ul class="listBox" *ngIf="plaIndex==0">
+      <li (tap)="toActDel(i.id)" *ngFor="let i of actList">
+        <activity-list [actList]="i"></activity-list>
+      </li>
+    </ul>
+    <!--品味-->
+    <ul class="plaAct" *ngIf="plaIndex==1">
+      <li (tap)="toTastDel(i.id)" *ngFor="let i of tasteList">
+        <see-hear [tasteList]="i"></see-hear>
+      </li>
+    </ul>
+    <!--景点-->
+    <ul class="plaTaste" *ngIf="plaIndex==2">
+      <li (tap)="tojingdian(i.id)" *ngFor="let i of item">
+        <map-landscape [item]="i"></map-landscape>
+      </li>
+
+    </ul>
+    <!--场馆-->
+    <ul class="plaTaste" *ngIf="plaIndex==3">
+      <li (tap)="toSpaceDel(i.id)" *ngFor="let i of spaceList">
+        <space-list [spaceList]="i"></space-list>
+      </li>
+    </ul>
+  </ion-content>
+
+  </div>

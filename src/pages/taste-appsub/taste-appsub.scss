@@ -1,0 +1,117 @@
+page-taste-appsub {
+  .tasApSub {
+    width: 10rem;
+    margin: 0 auto;
+    font-family: '宋体';
+    height: 100%;
+    color: #9e894b;
+    background: url("../assets/imgs/2.png") repeat;
+    background-size: 0.0966rem 0.0966rem;
+    .tasSubTit {
+      width: 100%;
+      height: px2em(130px);
+      background: #272727;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      @include font-dpr(16px);
+      position: relative;
+      .otit {
+        width: px2em(100px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        position: absolute;
+        left: px2em(50px);
+        i {
+          color: #9e894b;
+          @include font-dpr(16px);
+        }
+      }
+    }
+    #tasApSubBody {
+      overflow: scroll;
+      padding-bottom: px2em(180px);
+      .appraiseBox {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding-right: px2em(35px);
+        box-sizing: border-box;
+        .userPhoto {
+          width: px2em(217px);
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          img {
+            width: px2em(130px);
+            height: px2em(130px);
+            border-radius: 50%;
+            border: px2em(4px) solid #9e894b;
+            background: #272727;
+            margin-top: px2em(50px);
+            overflow: hidden;
+          }
+        }
+        .userApprai {
+          flex: 1;
+          padding: px2em(64px) px2em(36px) 0 0;
+          box-sizing: border-box;
+          border-bottom: 1px solid #9e894b;
+          .appodl {
+            dt {
+              @include font-dpr(15px);
+              font-weight: 600;
+              span {
+                @include font-dpr(13px);
+                font-weight: 600;
+                color: #999;
+                margin-left: px2em(30px);
+              }
+            }
+          }
+          .oappCon {
+            padding: px2em(40px) 0;
+            color: white;
+            @include font-dpr(14.6px);
+          }
+        }
+      }
+      .wonderful{
+        width:100%;
+        position: fixed;
+        bottom: 0;
+        height:px2em(160px);
+        overflow: hidden;
+        background: #9e894b;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 px2em(40px);
+        box-sizing: border-box;
+        @include font-dpr(15px);
+        font-weight: 600;
+        input{
+          width:px2em(973px);
+          height:px2em(100px);
+          border:none;
+          background: #ceb76e;
+          border-radius: px2em(50px);
+          padding:0 px2em(40px);
+          box-sizing: border-box;
+          @include font-dpr(14px);
+        }
+        span{
+          display: flex;
+          width: px2em(166px);
+          height:px2em(100px);
+          justify-content: center;
+          align-items: center;
+          color: white;
+        }
+      }
+    }
+  }
+}

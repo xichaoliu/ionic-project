@@ -1,0 +1,38 @@
+msg-text {
+ .msgtext{
+    @include font-dpr(13px);
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #676767;
+  height: px2em(117px);
+  width: px2em(1162px);
+
+ }
+ .msgtextbox{
+     width: px2em(1162px);
+     background: #272727;
+     color: #9a9a9a;
+     text-align: left;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+     border-bottom: px2em(4px) solid #9e894b;
+ }
+ .msgtextbox .msgtitle{
+     color: #9e894b;
+     @include font-dpr(16.6px);
+     width: px2em(1162px);
+     height: px2em(148px);
+     padding-left:px2em(40px);
+     display: flex;
+     align-items: center;
+ }
+ .msgtextcontent{
+    @include font-dpr(15px);
+    width: px2em(1162px);
+    @include line-height(20px);
+    padding: 0px px2em(40px) px2em(40px) px2em(40px);
+ }
+}

@@ -1,0 +1,17 @@
+<div class="body">
+    <div class="msg_box">
+        <div class="msg_back">
+          <div class="redelTit">
+            <div class="otit" (tap)="toBack()"><i class="iconfont icon-fanhui"></i></div>
+            <span>意见及建议</span>
+            <span class="save" (tap)="tijiao()">提交</span>
+          </div>
+          <div class="yijianbox">
+            <div class="yijianinput">
+                <textarea type="text" placeholder="请提出您的宝贵意见及建议" maxlength="120" [(ngModel)]="content"></textarea>
+
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

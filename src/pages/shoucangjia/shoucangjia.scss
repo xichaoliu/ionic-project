@@ -1,0 +1,135 @@
+page-shoucangjia {
+    .setting{
+        display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  width: 100%;
+    }
+    .listBox{
+      width:10rem;
+      margin:0 auto;
+      padding:px2em(40px);
+      box-sizing:border-box;
+      overflow: hidden;
+      li{
+        width:100%;
+        height:px2em(650px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border:px2em(2px) solid #9e894b;
+        border-radius: px2em(30px);
+        margin-bottom: px2em(40px);
+
+      }
+       .loadtxt{
+        @include font-dpr(14px);
+        text-align: center;
+        color: #9e894b;
+        margin: px2em(20px);
+      }
+    }
+    .msg_box{
+        width: 100%;
+        font-weight: bold;
+    }
+    .redelTit {
+       width: 100%;
+       height: px2em(130px);
+       display: flex;
+       font-weight: 600;
+       justify-content: center;
+       align-items: center;
+       position: relative;
+       background: #272727;
+      .otit {
+        width: px2em(100px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        position: absolute;
+        left: px2em(50px);
+        i {
+          color: #9e894b;
+          @include font-dpr(16px);
+        }
+      }
+     }
+     .redelTit span{
+         color: #9e894b;
+         @include font-dpr(16px);
+     }
+    .actDetail{
+        width:10rem;
+        margin:0 auto;
+        font-family: '宋体';
+        height:100%;
+        background: url("../assets/imgs/2.png") repeat;
+        background-size: 0.0966rem 0.0966rem;
+        .adelTit{
+          width:100%;
+          height: px2em(130px);
+          background: #272727;
+          display: flex;
+
+          align-items: center;
+
+          box-sizing: border-box;
+          //font-weight: 600;
+          color:#9e894b;
+          @include font-dpr(16px);
+          i{
+            color:#9e894b;
+            @include font-dpr(16px);
+          }
+
+        }
+    }
+    .placeNav{
+        width:10rem;
+        margin:0 auto px2em(40px) auto;
+        height:px2em(150px);
+        background: #9e894b;
+        padding-top:px2em(3px);
+        box-sizing: border-box;
+        display: flex;
+        li{
+          flex: 1;
+          height:100%;
+          font-weight: 600;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color:#272727;
+          @include font-dpr(16px);
+        }
+        .pActive{
+          background: #272727;
+          color:#9e894b;
+        }
+      }
+     .search {
+        width: px2em(892px);
+        height: 0.6924rem;
+        line-height: 0.6924rem;
+        background: #4d4d4d;
+        border-radius: 2.8rem;
+    }
+    .search input{
+       color: #272727;
+       border: 0px;
+      height: 0.6924rem;
+      line-height: 0.6924rem;
+      background: none;
+      margin-left: px2em(10px);
+
+  }
+    .search i {
+        color: #272727 !important;
+        @include font-dpr(16px);
+        margin-left: 0.2415rem;
+        float: left;
+    }
+}

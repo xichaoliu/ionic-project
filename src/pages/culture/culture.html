@@ -1,0 +1,29 @@
+<!--&lt;!&ndash;轮播图&ndash;&gt;-->
+
+<div id="cul_body">
+    <lunbo-top [lunbTopList]="lunbTopList"></lunbo-top>
+  <acv-online [liveList]="liveList" *ngIf="liveList !='' "></acv-online>
+  <!--见闻-->
+  <img src="assets/imgs/0.png" class="add" alt="" (tap)="opentast();">
+  <ul>
+    <li *ngFor="let i of tasteList" (tap)="toTastDel(i.id)">
+      <see-hear [tasteList]="i"></see-hear>
+    </li>
+  </ul>
+
+  <!--活动-->
+  <ul>
+    <li (tap)="toActDel(i.id)" *ngFor="let i of actList">
+      <cul-activity [actList]="i"></cul-activity>
+    </li>
+   <li class="loadtxt">{{msg}}</li>
+  </ul>
+
+</div>
+
+<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+  <ion-infinite-scroll-content loadingSpinner="bubbles"
+  loadingText="数据加载中..."></ion-infinite-scroll-content>
+</ion-infinite-scroll>
+
+

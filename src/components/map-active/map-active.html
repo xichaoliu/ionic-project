@@ -1,0 +1,13 @@
+<!-- Generated template for the MapActiveComponent component -->
+<ul class="listBox map-box" *ngIf="item">
+  <li (click)="toActDel(item.id)">
+    <div class="newslist activitybox" [style.background-image]="'url(' + item.pic+ ')'" style="background-size:cover;">
+      <div class="activty_mask">
+        <div class="activty_label">{{item.classifyname}}</div>
+        <div class="activty_title">{{item.name}}</div>
+        <div class="subtitle"><span>{{data}} {{time}}</span><span>{{item.hostnit}}</span></div>
+        <div class="active-distance"><span>{{item.distance}}km</span><span class="nvg" (click)="toNav2(item.coordinates);$event.stopPropagation();" *ngIf="isGps"></span></div>
+      </div>
+    </div>
+  </li>
+</ul>

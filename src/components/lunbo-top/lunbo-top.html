@@ -1,0 +1,16 @@
+<!-- Generated template for the LunboTopComponent component -->
+<!-- Swiper -->
+
+    <div id="top" class="swiper-container" >
+        <div class="swiper-wrapper" *ngIf="lunbTopList">
+            <!--<div class="swiper-slide swiper-slide2" [style.background-image]="'url('+i.pic+')'" style="background-size:cover;" *ngFor="let i of lunbTopList"></div>-->
+            <!--<div class="swiper-slide swiper-slide2" style="background:url(http://placehold.it/1242x580) no-repeat; background-size:cover;">Slide 1</div>-->
+            <div class="swiper-slide swiper-slide2" *ngFor="let i of lunbTopList" [style.background-image]="'url(' + i.pic+ ')'" style="background-size:cover;">&nbsp;</div>
+
+        </div>
+
+    <div class="swiper-pagination"></div>
+
+    <!--<div class="swiper-button-next"></div>-->
+    <!--<div class="swiper-button-prev"></div> &ndash;&gt;-->
+    </div>

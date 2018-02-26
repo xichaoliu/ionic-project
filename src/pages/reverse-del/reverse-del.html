@@ -1,0 +1,46 @@
+<div class="reverseDel" *ngIf="resActdetail && order">
+  <div class="redelTit"><div class="otit" (tap)="toBack()"><i class="iconfont icon-fanhui"></i></div></div>
+  <div id="reverdelBody">
+    <div class="redelImg">
+      <div class="qrcodebox"><qr-code [value]="resActdetail.code"></qr-code></div>
+    </div>
+    <!--<div class="redelName" *ngIf="order.a_status == 0">已过期</div>-->
+    <div class="reCode">二维码有效时间为60秒,失效请<a (tap)="refresh()">刷新</a></div>
+    <div class="redelName isgo" *ngIf="order.status == 1">已报名</div>
+    <div class="redelName" *ngIf="order.status == 2">已取消</div>
+
+   <!-- <div class="redelName isgo" *ngIf="order.status == 2">已参与</div>
+    <div class="redelName" *ngIf="order.c_status == 1">已评价</div>-->
+    <!---->
+    <ul class="revdelOul">
+      <li>
+        <dl>
+          <dt>{{order.name}}</dt>
+          <dd><span>时间：</span>{{order.starttime}}~{{order.endtime}}</dd>
+          <dd><span>电话：</span>{{order.phone}}</dd>
+          <dd><span>地址：</span>{{order.address}}</dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt>预 订 人：{{order.accname}}</dt>
+          <dt>预订电话：{{order.mobile}}</dt>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt>订单编号：{{order.id}}</dt>
+          <dt>下单时间：{{order.createtime}}</dt>
+        </dl>
+      </li>
+    </ul>
+
+    <!--<div class="isToPart" *ngIf="status == 2" (tap)="toAppraiseSub()">
+      <p>评 价</p>
+    </div>-->
+    <div class="isToPart" *ngIf="order.status  == 1" (tap)=" cancelTicket(order.id)">
+      <p>取 消</p>
+    </div>
+  </div>
+
+</div>

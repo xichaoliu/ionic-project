@@ -1,0 +1,20 @@
+<!--
+  Generated template for the GuanzhuPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div class="body">
+    <div class="msg_box">
+      <div class="msg_back">
+         <div class="redelTit">
+           <div class="otit" (tap)="toBack()"><i class="iconfont icon-fanhui"></i></div>
+           <span>关注</span>
+         </div>
+         <div *ngFor="let i of guanzhulist;" >
+            <venue (cancle)="cancle($event)" [guanzhulist]="i"></venue>
+          </div>
+
+      </div>
+      </div>
+</div>

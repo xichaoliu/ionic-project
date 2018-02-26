@@ -1,0 +1,123 @@
+page-perfect {
+    .msg_box{
+        height: 100%;
+        width: 100%;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .msg_back{
+        width: 100%;
+    }
+    .redelTit {
+       width: 100%;
+       height: px2em(130px);
+       font-weight: 600;
+      display: flex;
+       justify-content: space-between;
+       align-items: center;
+      padding:px2em(50px);
+      box-sizing: border-box;
+       background: #272727;
+       i {
+         color: #9e894b;
+         @include font-dpr(16px);
+       }
+     }
+     .redelTit span{
+         color: #9e894b;
+         @include font-dpr(16px);
+     }
+     .save{
+         color: #fff !important;
+     }
+     .perfectbox{
+         width: px2em(1162px);
+        background: #272727;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: px2em(40px);
+        border-bottom:solid #9e894b px2em(2px);
+     }
+     .perfectcenter{
+         width: px2em(1070px);
+         border-bottom: #474747 solid px2em(2px);
+     }
+     .perfectline{
+         height: px2em(142px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: px2em(35px) auto;
+        span{
+            @include font-dpr(17px);
+            color: #9e894b;
+        }
+        .tou{
+            width:px2em(135px);
+            height: px2em(135px);
+            position: relative;
+            display: flex;
+        }
+        .tou img{
+            width: px2em(135px);
+            height: px2em(135px);
+            border: #9e894b solid px2em(2px);
+            border-radius: px2em(155px);
+        }
+       .tou input{
+         width: px2em(135px);
+         height: px2em(135px);
+         position: absolute;
+         top:0;
+         left: 0;
+         opacity: 0;
+         @include font-dpr(0);
+         border:none;
+       }
+        .perfectinput{
+            display: flex;
+            justify-content: center;
+            align-items: right;
+            width: 66%;
+        }
+        .perfectinput input{
+            background: none;
+            padding: 0px;
+            border: 0px;
+            text-align: right;
+            color: #979797;
+            width: 100%;
+            @include font-dpr(17px);
+        }
+     }
+      /*单选*/
+			.radio_label{
+				background: url(../assets/imgs/radio_bk.png) no-repeat;
+				background-size:px2em(54px) px2em(110px);
+				display: inline-block;
+				line-height: px2em(54px);
+				height: px2em(54px);
+                @include font-dpr(17px);
+                color: #979797;
+                padding-left:px2em(80px);
+			     margin-left: px2em(96px);
+			}
+
+			.checked {
+				background-position:0 px2em(-54px);
+			}
+
+			input[type='radio'] {
+				display:none;
+			}
+            .nowidth{
+                width: auto !important;
+            }
+            .noborder{
+                border: 0 !important;
+            }
+}

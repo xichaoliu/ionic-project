@@ -1,0 +1,72 @@
+page-me {
+
+  .top_header{
+    height: px2em(610px);
+    background: url('../assets/imgs/pbg.png') no-repeat;
+    background-size: cover;
+    border-bottom: solid #9e894b px2em(4px);
+  }
+  .top_setting{
+    display: flex;
+    height: px2em(145px);
+    line-height: px2em(145px);
+  justify-content: flex-end;
+  margin-right: px2em(60px);
+
+  }
+
+  .top_setting .iconfont{
+    @include font-dpr(16px);
+    color: #9e894b;
+    margin-left: px2em(50px);
+  }
+  .top_head{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+  }
+  .touxiang{
+    width: px2em(210px);
+    height: px2em(210px);
+    margin:px2em(30px) auto;
+  }
+  .touxiang img{
+    width: px2em(210px);
+    height: px2em(210px);
+    border: #9e894b solid px2em(4px);
+    border-radius: px2em(210px);
+  }
+  .nickname h2{
+    color:white;
+    height: px2em(140px);
+    display: flex;
+  justify-content: center;
+  align-items: center;
+    @include font-dpr(17px);
+  }
+  .me_center{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    margin-top: px2em(60px);
+  }
+  .me_line{
+    height: px2em(215px);
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    width:px2em(475px);
+    text-align: center;
+    color: #9e894b;
+    border-bottom: 1px solid #000000;
+    @include font-dpr(17px);
+  }
+  .me_line span{
+    @include font-dpr(12px);
+    margin-top: px2em(-95px);
+    color: #4b4b4b;
+  }
+}

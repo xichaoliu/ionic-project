@@ -1,0 +1,63 @@
+<div class="actDetail" *ngIf="actDel">
+  <div class="adelTit">
+    <div class="otit" (tap)="toBack()"><i class="iconfont icon-fanhui"></i></div>
+    <collect-transpond [colDel]="actDel" [type]="1" (reCollect)="reCollect($event)"></collect-transpond>
+  </div>
+  <ion-content>
+    <div id="actdelBody">
+      <div class="titcon">
+        <div class="titdel">
+          <div class="oImg" [style.background-image]="'url(' + actDel.pic + ')'" style="background-size:cover;"></div>
+          <span class="status" (tap)="tovideo(actDel.id)" *ngIf="actDel.l_status == 1"><i></i>全程直播</span>
+          <p class="titP">{{actDel.name}}</p>
+        </div>
+      </div>
+      <ul class="adeIntro">
+        <li *ngIf="actDel.reserve == 1">票&emsp;数 : {{actDel.surplus  }}/{{actDel.ticket}}</li>
+        <!--<li *ngIf="actDel.reserve == 0" class="noReser">票&emsp;数 : </li>-->
+        <li>时&emsp;间 : {{actDel.starttime}}~{{actDel.endtime}}</li>
+        <li>地&emsp;址 : {{actDel.address}} <i class="iconfont icon-dizhi" (click)="actToMap()"></i></li>
+        <li>电&emsp;话 : {{actDel.phone}} <a href="tel:{{actDel.phone}}"><i class="iconfont icon-dianhua"></i></a></li>
+        <li>主办方 : {{actDel.hostnit}}</li>
+      </ul>
+      <div class="plaLabel">
+        <div class="labDel">
+          <div class="labelImg">
+            <img src="{{actDel.s_pic}}" alt=""/>
+          </div>
+          <p>{{actDel.stationname}}</p>
+          <div class="obtn"><button (tap)="toplaceDel(actDel.stationid, actDel.type)">主 页</button></div>
+        </div>
+      </div>
+      <div class="acdelp">
+        <p [innerHTML]="actDel.description"></p>
+      </div>
+      <div class="warn">
+        <p class="warnTit">温馨提示</p>
+        <ul class="warnCon">
+          <li><p><i class="iconfont icon-wenxintishi"></i>订票成功后可以在个人中心我的订单中查询</p></li>
+          <li><p><i class="iconfont icon-wenxintishi"></i>到现场检票请出示手机二维码，管理员会验证二维码准入</p></li>
+          <li><p><i class="iconfont icon-wenxintishi"></i>订票成功后全场未入场票数达5次，将被取消当年预定资格</p></li>
+          <li><p><i class="iconfont icon-wenxintishi"></i>活动开始前4小时内不能退票</p></li>
+        </ul>
+      </div>
+      <div class="wonderful" *ngIf="actDel.status ==0 && actDel.reserve == 1"  (tap)="toReserve(actDel)">
+        <!--<button>-->
+        <p>我要参与</p>
+        <p>Participate in</p>
+        <!--</button>-->
+      </div>
+      <div class="wonderful" *ngIf="actDel.status ==1 ||(actDel.status ==0 && actDel.reserve == 0)">
+        <!--<button>-->
+        <p>直接前往</p>
+        <p>Participate in</p>
+        <!--</button>-->
+      </div>
+      <div class="wonderful" (tap)="toAppraise(actDel.id)"  *ngIf="actDel.status ==2" >
+        <p>精彩点评</p>
+        <p>Wonderful comments</p>
+      </div>
+    </div>
+  </ion-content>
+
+</div>

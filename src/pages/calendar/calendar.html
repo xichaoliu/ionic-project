@@ -1,0 +1,45 @@
+<!--
+  Generated template for the CalendarPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div class="calTit"><i class="iconfont icon-fanhui" (tap)="toBack()"></i>日历</div>
+<div class="calendar">
+  <div class="year">
+    <span class="left"  (touchstart)="sub()"><i class="iconfont icon-riliqianyigeyue"></i></span>
+   {{Year}}年{{Month}}月
+    <span class="right" (touchstart)="add()"><i class="iconfont icon-rilihouyigeyue"></i></span>
+  </div>
+  <div class="week">
+    <span class="col">日</span>
+    <span class="col">一</span>
+    <span class="col">二</span>
+    <span class="col">三</span>
+    <span class="col">四</span>
+    <span class="col">五</span>
+    <span class="col">六</span>
+  </div>
+  <div class="date">
+     <div class="day" *ngFor="let item of arr">
+       <span #DOM  *ngFor="let i of item" (touchstart)="choose(i)" [class]="i.cs?'chosed '+i?.ca:i?.ca+' '+i?.cp">{{i.v}}</span>
+     </div>
+  </div>
+</div>
+<div class="rela_con" id="rel_con">
+  <div id="act-drag">
+    <p class="note"><span style="color: #fff">白色</span>日期代表当日有活动，请点击日期查看当日活动列表</p>
+    <p class="act-title">
+      <i class="icon-left icon"></i>
+      <span class="act-tit">当日活动</span>
+      <i class="icon-right icon"></i>
+    </p>
+  </div>
+  <div class="act-list-container">
+    <ul class="act-list">
+      <li *ngFor="let a of actList" (click)="toActDetail(a.id)">
+        <activity-list [actList]="a"></activity-list>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,83 @@
+venue {
+    .place-item{
+        width: 9.356rem;
+        height: 2.576rem;
+        margin:0 auto;
+        margin-top: 0.322rem;
+        font-family: '宋体';
+        font-weight: bold;
+
+
+        .item-left{
+          width: 1.288rem;
+          height: 2.576rem;
+          float: left;
+          background: #9e894b;
+        }
+        .item-right{
+          width: 8.067rem;
+          height: 2.576rem;
+          padding-left: 1.288rem;
+          float: left;
+          background: #272727;
+          position:relative;
+          img{
+            width: 1.932rem;
+            height: 1.932rem;
+            position: absolute;
+            left: -0.966rem;
+            top: 0.322rem;
+            -webkit-box-shadow:2px 4px 5px#1f1f1f;/*webkit*/
+          }
+          div.place-gps{
+            position:absolute;
+            right: px2em(50px);
+            top:px2em(50px);
+            @include font-dpr(14px);
+            color:#9e894b;
+            height: 2.576rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+          }
+          .place-gps .gps-distance{
+            border:px2em(3px) #9e894b solid ;
+            border-radius: px2em(80px);
+            padding: px2em(25px) px2em(50px);
+          }
+
+          p.place-title{
+            width: 7rem;
+            padding-right:px2em(50px);
+            margin-top: px2em(50px);
+            margin-bottom: px2em(50px);
+            @include font-dpr(17px);
+            color:#fff;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          div.place-detail{
+            width: px2em(376px);
+            height: px2em(124px);
+            display: flex;
+            justify-content: space-between;
+            p.place-detail-item{
+              height: px2em(124px);
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              align-items: center;
+              float:left;
+              @include font-dpr(14px);
+              color:#9e894b;
+              i{
+                font-style: normal;
+                color:#656565;
+              }
+            }
+          }
+        }
+      }
+}

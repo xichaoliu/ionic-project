@@ -1,0 +1,202 @@
+bombbox {
+    .popMess{
+        width:10rem;
+        margin:0 auto;
+        height:100%;
+        background: rgba(0,0,0,.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top:0;
+        .bgbox{
+            width:px2em(1022px);
+            background: #978447;
+            border-radius: px2em(20px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .messBox{
+          width:100%;
+          justify-content: center;
+          align-items: center;
+
+          display: flex;
+          flex-direction: column;
+          .messTit{
+            width:100%;
+             height: px2em(150px);
+
+             display: flex;
+             justify-content: center;
+            p{
+              color:#000;
+              font-weight: 600;
+              @include font-dpr(16.7px);
+
+            }
+            p:nth-child(2){
+              color:#fffffd;
+              @include font-dpr(15.3px);
+
+            }
+          }
+          .messBtn{
+            flex:1;
+            display: flex;
+            font-weight: 600;
+            @include font-dpr(14.6px);
+            p{
+              flex: 1;
+              color:#fffffd;
+              border-right: 1px solid #ddd;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            p:nth-child(2){
+              border-right: none;
+              color:#f2dfa0;
+            }
+
+          }
+        }
+
+      }
+      .bombbox{
+          width: px2em(792px);
+          margin-top: px2em(103px);
+          margin-bottom: px2em(177px);
+      }
+      .bomok{
+        width: px2em(522px);
+        height: px2em(138px);
+        border: solid #262626 2px;
+        @include font-dpr(17.2px);
+        display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:px2em(147px);
+  border-radius: px2em(122px);
+      }
+      .bombline{
+          height: px2em(190px);
+          @include font-dpr(17.3px);
+          display: flex;
+          justify-content: left;
+          align-items: center;
+      }
+      .bombline input{
+          width: 42%;
+          background: none;
+          border: 0px;
+      }
+      .addborder{
+          border-top: solid #252525 px2em(4px);
+          border-bottom: solid #252525 px2em(4px);
+          justify-content: space-between;
+        input{
+          width:36%;
+        }
+      }
+      .closebomb{
+          width: px2em(158px);
+          height: px2em(158px);
+          margin-top: px2em(87px);
+          .iconfont{
+            @include font-dpr(50px);
+            color: #ddd;
+          }
+      }
+      .sendcode{
+        border: #252525 solid px2em(3px);
+        width: px2em(250px);
+        height: px2em(83px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include font-dpr(13.3px);
+      }
+      .margin88{
+          margin-top: px2em(88px) !important;
+          margin-bottom: px2em(60px) !important;
+      }
+      .codeinput{
+          width: px2em(778px);
+          height: px2em(140px);
+          margin: px2em(15px) 0px;
+          background: #d0b970;
+          border-radius: px2em(10px);
+          display: flex;
+  justify-content: center;
+  align-items: center;
+          input{
+              background:none;
+              border: 0px;
+              width: 100%;
+              padding-left: px2em(10px);
+              @include font-dpr(16px);
+          }
+      }
+      .popMess2{
+        width:10rem;
+        margin:0 auto;
+        height:100%;
+        background: rgba(0,0,0,.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top:0;
+        .messBox2{
+          width:px2em(896px);
+          height:px2em(530px);
+          background: #978447;
+          border-radius: px2em(20px);
+          display: flex;
+          flex-direction: column;
+          .messTit{
+            width:100%;
+            height:px2em(380px);
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            p{
+              color:#000;
+              font-weight: 600;
+              @include font-dpr(16.7px);
+              margin-bottom: px2em(70px);
+            }
+            p:nth-child(2){
+              color:#fffffd;
+              @include font-dpr(15.3px);
+
+            }
+          }
+          .messBtn{
+            flex:1;
+            display: flex;
+            font-weight: 600;
+            @include font-dpr(14.6px);
+            p{
+              flex: 1;
+              color:#fffffd;
+              border-right: 1px solid #ddd;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            p:nth-child(2){
+              border-right: none;
+              color:#f2dfa0;
+            }
+
+          }
+        }
+
+      }
+    }

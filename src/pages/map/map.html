@@ -1,0 +1,25 @@
+  <div id="container">
+  </div>
+<div class="search">
+  <label for="t1" (tap)="back()"><i class="iconfont icon-fanhui"></i></label><input type="text" id="t1" disabled placeholder="找点什么。。。" (tap)="toMapSearch()">
+</div>
+<div class="bottom">
+  <div class="tabs">
+    <span *ngFor="let m of mapNav; let i = index"  [class.actived]="mapIndex === i" (click)="switchOver(m)">{{m.tit}}</span>
+  </div>
+  <div class="con" id="con">
+    <div class="drag" id='map_drag'><i class="iconfont icon-ditushangla"></i></div>
+    <div class="s_con">
+      <ul *ngIf="mapIndex === 0 && (chosedData || data)">
+        <li *ngFor="let a of chosedData || data"><map-active [item]="a" [isGps]="isGps" [lMap1] = 'map' (onGps1)="gps($event)"></map-active></li>
+      </ul>
+      <ul *ngIf="mapIndex === 1  && (chosedData || data)">
+        <li *ngFor="let p of chosedData || data"><map-place [item]="p" [isGps]="isGps"  [lMap] = 'map' (onGps)="gps($event)"></map-place></li>
+      </ul>
+      <ul *ngIf="mapIndex === 2  && (chosedData || data)">
+        <li *ngFor="let l of chosedData || data"><map-landscape [item]="l" [isGps]="isGps" [lMap2] = 'map' (onGps2)="gps($event)"></map-landscape></li>
+      </ul>
+    </div>
+    <div class="orient" (click)="getPosition(1)"><i class="iconfont icon-dingwei"></i></div>
+  </div>
+</div>

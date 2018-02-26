@@ -1,0 +1,49 @@
+<div class="reverseBox" *ngIf="actDel">
+  <div class="reverTit">
+    <i class="iconfont icon-fanhui" (tap)="toBack()"></i>预 定
+  </div>
+  <div id="reverBody">
+    <div class="titcon">
+      <div class="titdel">
+        <div class="oimg" [style.background-image]="'url(' + actDel.pic+ ')'" style="background-size:cover;"></div>
+        <p class="titP">{{actDel.name}}</p>
+        <p class="cont">时间：{{actDel.starttime}}~{{actDel.endtime}}</p>
+        <p class="cont">地址：{{actDel.address}}</p>
+      </div>
+    </div>
+    <ul class="revDel">
+      <li>
+        <div class="revList">
+          <label>姓名：</label>
+          <input type="text" [(ngModel)]="nameValue" maxlength="4"/>
+        </div>
+      </li>
+      <li>
+        <div class="revList">
+          <label>电话：</label>
+          <input type="text" [(ngModel)]="phoneValue" maxlength="11"/>
+        </div>
+      </li>
+      <li>
+        <div class="revList">
+          <label>数量：</label>
+          <div class="addNum">
+            <i (tap)="increase(actDel.restrict)">+</i>
+            <span class="poll">1</span>
+            <i (tap)="decrease()">-</i>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="botBtn">
+      <button (click)="sureMess()">
+        <p>确定</p>
+        <p>determine</p>
+      </button>
+    </div>
+  </div>
+  <!--蒙版-->
+  <div *ngIf="isMess">
+    <pop-mess (messBox)="messShow($event)" [resDelID]="resDelID"></pop-mess>
+  </div>
+</div>

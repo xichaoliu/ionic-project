@@ -1,0 +1,84 @@
+page-scen-del {
+  .scen-detail{
+    width:100%;
+    font-family: '宋体';
+    height:100%;
+    background: url("../assets/imgs/2.png") repeat;
+    background-size: 0.0966rem 0.0966rem;
+    .scen-page-title{
+      width:100%;
+      height: px2em(130px);
+      background: #272727;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding:px2em(50px);
+      box-sizing: border-box;
+      //font-weight: 600;
+      color:#9e894b;
+      @include font-dpr(16px);
+      i{
+        color:#9e894b;
+        @include font-dpr(16px);
+      }
+
+    }
+    #scen-body{
+      width: 100%;
+      overflow: scroll;
+      //display: flex;
+      //justify-content: center; // display:flex不支持scroll
+      #scen-body-content{
+        width: px2em(1161px);
+        overflow: hidden;
+        margin:0 auto;
+        div.scen-name{
+          width:100%;
+          text-align: left;
+          padding: px2em(40px) 0;
+          @include font-dpr(24px);
+          font-weight: bold;
+          color: #ffffff;
+        }
+        div.scen-content{
+          width: 100%;
+          background: #272727;
+          overflow: hidden;
+          border-bottom: px2em(4px) solid #9e894b;
+          .scen-img{
+            width: px2em(1161px);
+            height: px2em(650px);
+          }
+          .scen-detail-list{
+            width: 100%;
+            padding-top:px2em(44px);
+            padding-left: px2em(40px);
+            li{
+              width: 100%;
+              padding-bottom:px2em(30px);
+              @include font-dpr(14px);
+              font-weight: bold;
+              color:#9e894b;
+              text-align: left;
+              &:last-child{
+                padding-bottom:px2em(45px)
+              }
+              i{
+                color: #ffffff;
+                margin-left: px2em(40px);
+              }
+            }
+          }
+        }
+        div.scen-description{
+          width: 100%;
+          padding-top: px2em(24px);
+          font-family: 'yahei';
+          @include font-dpr(16px);
+          color: #999999;
+          line-height: px2em(72px);
+        }
+      }
+    }
+  }
+}

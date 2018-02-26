@@ -1,0 +1,17 @@
+<!-- Generated template for the MapPlaceComponent component -->
+<div class="place-item map-box" (click)="toDetail(item)">
+    <div class="item-left"></div>
+    <div class="item-right" *ngIf="item">
+      <img src="{{item.pic}}" alt="">
+      <p class="place-title">{{item.sname}}</p>
+      <div class="place-detail">
+        <p class="place-detail-item">活动 <i>{{a_num}}</i></p>
+        <p class="place-detail-item">空间 <i>{{v_num}}</i></p>
+        <p class="place-detail-item">品味 <i>{{k_num}}</i></p>
+      </div>
+      <div class="place-gps">
+        <div class="gps-icon"  (click)="toNav(item.coordinates);$event.stopPropagation();" *ngIf="isGps" ></div>
+        <div class="gps-distance">{{distance || item.distance}}km</div>
+      </div>
+    </div>
+</div>

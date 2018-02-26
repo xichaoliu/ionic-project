@@ -1,0 +1,126 @@
+page-nav {
+  .body {
+    font-family: '宋体';
+    font-weight: 600 !important;
+}
+.indexcolor {
+    color: #272727;
+    @include font-dpr(17px);
+}
+.indextext {
+    color: #c6ae68;
+    @include font-dpr(11px);
+}
+.headleft {
+    float: left;
+    width: 1.651rem;
+    text-align: center;
+    line-height: 1.055rem;
+    color: #9e894b;
+    @include font-dpr(16px);
+}
+.headcenter {
+    margin-top: 0.1851rem;
+    width: 6.8rem;
+    margin-left: 0.1369rem;
+}
+.headright {
+    float: left;
+    width: 1.280rem;
+    line-height: 1.055rem;
+    @include font-dpr(20px);
+    text-align: center;
+}
+div.body {
+    display: flex;
+    display: -webkit-flex;
+    /* Safari */
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url("../assets/imgs/2.png") repeat;
+    background-size: 0.0966rem 0.0966rem;
+    div.search {
+        width: 6.4412rem;
+        height: 0.6924rem;
+        line-height: 0.6924rem;
+        background: #4d4d4d;
+        border-radius: 2.8rem;
+    }
+    div.search i {
+        color: #272727;
+        @include font-dpr(16px);
+        margin-left: 0.2415rem;
+        float: left;
+    }
+    .h_con {
+        width: 10rem;
+        height: 1.055rem;
+        margin: 0 auto;
+        background: #272727; //padding: 0;
+        position: relative;
+        #selectList {
+            background: #272727;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 4.34rem;
+            left: 0;
+            z-index: 999;
+            li {
+                list-style: none;
+                text-align: center;
+            }
+        }
+    }
+    .grid {
+        padding: 0;
+    }
+    .head {
+        color: #9e894b;
+        float: left;
+    }
+    .headright i {
+        @include font-dpr(20px);
+        font-weight: normal;
+    }
+    div.tabs {
+        display: flex;
+        display: -webkit-flex;
+        /* Safari */
+        width: 10rem;
+        height: px2em(182px) !important;
+        background: #9e884c;
+
+        div {
+            display: flex;
+            display: -webkit-flex;
+            /* Safari */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            @include font-dpr(17px);
+            color: #c6ae68;
+            background: #9e884c;
+        }
+        .colo {
+            color: #fff;
+            height: px2em(179px);
+            background: #272727;
+            margin-top: px2em(3px);
+        }
+        .colo .indexcolor{
+            color: #fff !important;
+        }
+    }
+    div.con {
+        //display: flex;
+        //display: -webkit-flex; /* Safari */
+        width: 100%;
+        flex-grow: 1; //height: 0rem;
+        overflow: scroll;
+        position: relative;
+    }
+}
+}

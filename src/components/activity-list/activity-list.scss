@@ -1,0 +1,48 @@
+activity-list {
+  .newslist{
+    width: px2em(1130px);
+    position: relative;
+  }
+  .activitybox{
+    height:4.9114rem;
+    border-radius: 0.161rem;
+  }
+  .activty_mask{
+    width: px2em(1130px);
+    height:4.9114rem;
+    border-radius: 0.161rem;
+    background:rgba(0,0,0,0.3)
+  }
+  .activty_label{
+    color:#9e894b;
+    width: 1.610rem;
+    text-align: center;
+    height: 0.789rem;
+    @include font-dpr(16px);
+    line-height: 0.789rem;
+    position: relative;
+    top: 0.5636rem;
+    background: rgba(39,39,39,0.8);
+  }
+  .activty_title{
+    color: #fff;
+    position:absolute;
+    bottom: px2em(150px);
+    padding-left:px2em(40px);
+    @include font-dpr(17.3px);
+    text-align: center;
+  }
+  .subtitle{
+    color:#9e894b;
+    position:absolute;
+    padding: 0.161rem 0.322rem;
+    float: left;
+    bottom: px2em(34px);
+    @include font-dpr(14px);
+    background: rgba(0, 0, 0, 0.5);
+
+  }
+  .subtitle span{
+    margin: 0px 5px;
+  }
+}

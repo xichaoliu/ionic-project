@@ -1,0 +1,79 @@
+page-switch-city {
+  div.sw-head{
+    width:100%;
+    display: flex;
+    height: px2em(130px);
+    background: #272727;
+    @include font-dpr(16px);
+    font-family: "宋体";
+    font-weight: bold;
+    color: #9e894b;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    .bc{
+      position:absolute;
+      left:px2em(60px);
+      top:px2em(36px);
+      display: inline-block;
+    }
+    i{
+      font-size: px2em(48px);
+    }
+  }
+  div.sw-content{
+    width: 100%;
+    height: 100%;
+    background: url("../assets/imgs/2.png") repeat;
+    background-size: 0.0966rem 0.0966rem;
+    display: flex;
+    justify-content: center;
+    div.sw-cont{
+      width:px2em(1040px);
+      overflow: hidden;
+      div.sw-gps{
+        width:100%;
+        height: px2em(80px);
+        padding: px2em(60px) 0;
+        display: flex;
+        align-items: center;
+        span.gps-city{
+          @include font-dpr(16px);
+          font-family: "宋体";
+          font-weight: bold;
+          color: #ffffff;
+          padding-right: px2em(22px);
+        }
+        span.gps-rem{
+          color: #9e894b;
+          @include font-dpr(14px);
+          font-family: "宋体";
+          font-weight: bold;
+        }
+      }
+      div.sw-city-list{
+        width: 100%;
+        overflow: hidden;
+        .city-item{
+          width: px2em(320px);
+          height: px2em(140px);
+          float:left;
+          margin-right: px2em(40px);
+          margin-bottom: px2em(40px);
+          background: #272727;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include font-dpr(16px);
+          font-family: "宋体";
+          font-weight: bold;
+          color: #9e894b;
+          padding-right: px2em(22px);
+          &:nth-child(3n){
+            margin-right:0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,141 @@
+page-appraise-submit {
+  .subvalue{
+    width:10rem;
+    margin:0 auto;
+    font-family: '宋体';
+    color:#9e894b;
+    height:100%;
+    background: url("../assets/imgs/2.png") repeat;
+    background-size: 0.0966rem 0.0966rem;
+    .valueTit{
+      width:100%;
+      height: px2em(130px);
+      background: #272727;
+      padding:0 px2em(50px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      @include font-dpr(16px);
+      i{
+        @include font-dpr(16px);
+      }
+      span{
+        color:white;
+      }
+    }
+    #subValBody{
+      overflow: scroll;
+      padding:0 px2em(40px);
+      .vc1{
+        padding:px2em(100px) 0;
+        .oli{
+          @include font-dpr(16px);
+          padding-left: px2em(55px);
+          font-weight: 600;
+          margin-bottom: px2em(36px);
+          display: flex;
+          .starBox{
+            i{
+              @include font-dpr(16px);
+              color:#9e894b;
+            }
+          }
+           .ant-rate{
+            font-size:15px;
+            display: flex;
+            color:#9e894b;
+          }
+        }
+      }
+      textarea{
+        width:100%;
+        border:none;
+        height:px2em(500px);
+        background: #9e894b;
+        padding:px2em(40px);
+        box-sizing: border-box;
+        @include font-dpr(14.6px);
+        color:#554c28;
+        margin-bottom: px2em(50px);
+      }
+      .subImg{
+        display: flex;
+        flex-wrap: wrap;
+        li{
+          position: relative;
+          margin-right: px2em(80px);
+          img{
+            width:px2em(334px);
+            height:px2em(334px);
+          }
+          span{
+            width:px2em(80px);
+            height:px2em(80px);
+            border-radius: 50%;
+            border:px2em(2px) solid #9e894b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right:px2em(-40px);
+            top:px2em(-40px);
+            @include font-dpr(13px);
+            background: #272727;
+          }
+        }
+        li:nth-child(3n){
+          margin-right:0;
+        }
+        .lastC{
+          margin-right:0;
+          width:px2em(334px);
+          height:px2em(334px);
+          background: #272727;
+          border:px2em(4px) dashed #4d4d4d;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          overflow: hidden;
+          i{
+            @include font-dpr(44px);
+            color:#4d4d4d;
+          }
+          p{
+            @include font-dpr(13px);
+            color:#4d4d4d;
+          }
+          .oinput{
+            width:px2em(314px);
+            height:px2em(314px);
+            position:absolute;
+            top:px2em(10px);
+            left:px2em(10px);
+            input{
+              width:100%;
+              height:100%;
+              overflow: hidden;
+              border:none;
+              outline-style: none;
+              color:#4d4d4d;
+              opacity: 0;
+            }
+          }
+
+        }
+      }
+    }
+  }
+  :host ::ng-deep i {
+    font-size: 32px;
+    color: #999;
+  }
+  :host ::ng-deep .ant-upload-text {
+    margin-top: 8px;
+    color: #666;
+  }
+
+}
+

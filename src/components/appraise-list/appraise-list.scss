@@ -1,0 +1,86 @@
+appraise-list {
+  .appraiseBox{
+    width:100%;
+    height:100%;
+    display: flex;
+    padding-right: px2em(35px);
+    box-sizing: border-box;
+    .userPhoto{
+      width:px2em(217px);
+      //height:100%;
+      display: flex;
+      justify-content: center;
+      img{
+        width:px2em(130px);
+        height:px2em(130px);
+        border-radius: 50%;
+        border:px2em(4px) solid #9e894b;
+        background: #272727;
+        margin-top: px2em(50px);
+        overflow: hidden;
+      }
+    }
+    .userApprai{
+      flex: 1;
+      padding:px2em(64px) px2em(36px) 0 0;
+      box-sizing: border-box;
+      border-bottom: 1px solid #9e894b;
+      overflow: hidden;
+      .appodl{
+        dt{
+          @include font-dpr(15px);
+          font-weight: 600;
+          margin-bottom: px2em(30px);
+          span{
+            @include font-dpr(13px);
+            font-weight: 600;
+            color:#999;
+            margin-left: px2em(30px);
+          }
+        }
+        dd{
+          @include font-dpr(13.3px);
+          font-weight: 600;
+          color:#999;
+          margin-bottom: px2em(32px);
+          display: flex;
+          .ant-rate{
+            font-size:15px;
+            display: flex;
+            color:#9e894b;
+          }
+          .starBox{
+            //margin-left: px2em(30px);
+            i{
+              @include font-dpr(13.3px);
+              color:#9e894b;
+            }
+          }
+        }
+        dd:last-child{
+          margin-bottom:0;
+        }
+      }
+      .oappCon{
+        padding:px2em(40px) 0;
+        width:100%;
+        overflow: hidden;
+        p{
+          color:white;
+          @include font-dpr(14.6px);
+        }
+      }
+      .oappImg{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
+        img {
+          width: px2em(290px);
+          height: px2em(290px);
+          margin-bottom: px2em(60px);
+        }
+      }
+    }
+  }
+
+}

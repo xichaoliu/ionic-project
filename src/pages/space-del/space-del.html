@@ -1,0 +1,45 @@
+<div class="spaceDetail" *ngIf="spaceDel">
+  <div class="sdelTit">
+    <div class="otit" (tap)="toBack()"><i class="iconfont icon-fanhui"></i></div>
+    <collect-transpond [colDel]="spaceDel" [type]="2" (reCollect)="reCollect($event)"></collect-transpond>
+  </div>
+  <ion-content>
+    <div id="spacedelBody">
+      <div class="titcon">
+        <div class="titdel">
+          <img src="{{spaceDel.pic}}" alt=""/>
+          <p class="titP">{{spaceDel.name}}</p>
+        </div>
+      </div>
+      <ul class="sdeIntro">
+        <li>电&emsp;&emsp;话 : {{spaceDel.phone}} <a href="tel:{{spaceDel.phone}}"><i class="iconfont icon-dianhua"></i></a></li>
+        <li>地&emsp;&emsp;址 : {{spaceDel.address}} <i class="iconfont icon-dizhi" (click)="navToMap()"></i></li>
+        <li>面&emsp;&emsp;积 : {{spaceDel.area}} m² </li>
+        <li>容纳人数 : {{spaceDel.galleryful}}人</li>
+        <li>设施设备 : {{spaceDel.equipmentname}}</li>
+        <li>用&emsp;&emsp;途 : {{spaceDel.functions}}</li>
+      </ul>
+      <div class="plaLabel">
+        <div class="labDel">
+          <div class="labelImg">
+            <img src="{{spaceDel.s_pic}}" alt=""/>
+          </div>
+          <p>{{spaceDel.sname}}</p>
+          <div class="obtn"><button (tap)="toplaceDel(spaceDel.sid,spaceDel.type)">主 页</button></div>
+        </div>
+      </div>
+      <div class="acdelp">
+        <p [innerHTML]="spaceDel.info"></p>
+      </div>
+      <div class="wonderful">
+        <a href="tel:{{spaceDel.phone}}">
+          <!--<button>-->
+          <p>电话预约</p>
+          <p>Phone Appointment</p>
+          <!--</button>-->
+        </a>
+      </div>
+    </div>
+  </ion-content>
+
+</div>

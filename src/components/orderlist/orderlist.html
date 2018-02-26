@@ -1,0 +1,48 @@
+<!-- Generated template for the OrderlistComponent component -->
+
+<div class="orderpage">
+<div class="orderbox" *ngIf="orderlist">
+  <div class="ordermsg">
+    <div class="ordercenter">
+      <div class="orderaround" (tap)="toReserDel(orderlist.id)">
+          <div class="orderimg">
+            <img src="{{orderlist.pic}}">
+          </div>
+          <div class="ordertitle">
+            <div class="orderh2">{{orderlist.name}} </div>
+            <span>{{orderlist.starttime}}</span>
+            <span>{{orderlist.venuesname}}</span>
+             <div class="ordernum">
+                <span>x</span><span>{{orderlist.ticket}}</span>
+             </div>
+          </div>
+      </div>
+  </div>
+  </div>
+  <div class="orderbtn" *ngIf="orderlist.status==1&&orderlist.acti_status==0">
+    <div class="orderstatus" ><span>已报名</span></div>
+    <div class="orderokbtn" (tap)='quxiao(orderlist.id)'>取消</div>
+  </div>
+  <div class="orderbtn" *ngIf="orderlist.status==1&&orderlist.acti_status==1">
+    <div class="orderstatus w100"><span>进行中</span></div>
+    <!-- <div class="orderokbtn">取消</div> -->
+  </div>
+
+  <div class="orderbtn" *ngIf="orderlist.status==2">
+      <div class="orderstatus w100"><span (tap)='pingjia(orderlist.activity_id,orderlist.name )'>已取消</span></div>
+      <!-- <div class="orderokbtn">取消</div> -->
+    </div>
+    <div class="orderbtn" *ngIf="orderlist.attend.status==1&&orderlist.c_status==0&&orderlist.acti_status==2">
+        <div class="orderstatus" ><span>已参与{{orderlist.attend.status}}</span></div>
+        <div class="orderokbtn" (tap)='pingjia(orderlist.activity_id,orderlist.name )'>评价</div>
+      </div>
+      <div class="orderbtn" *ngIf="orderlist.attend.status==0&&orderlist.acti_status==2">
+          <div class="orderstatus w100" ><span>未参与</span></div>
+          <!-- <div class="orderokbtn">评价</div>   -->
+        </div>
+      <div class="orderbtn" *ngIf="orderlist.status==1&&orderlist.c_status==1">
+          <div class="orderstatus w100" ><span>已评价</span></div>
+          <!-- <div class="orderokbtn">取消</div> -->
+        </div>
+</div>
+</div>

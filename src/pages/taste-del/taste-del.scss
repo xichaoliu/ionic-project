@@ -1,0 +1,126 @@
+page-taste-del {
+  .tdimg{
+    width:100%;
+    height: 5rem;
+  }
+  .tasteDel{
+    width:10rem;
+    margin:0 auto;
+    font-family: '宋体';
+    height:100%;
+    color:#9e894b;
+    background: url("../assets/imgs/2.png") repeat;
+    background-size: 0.0966rem 0.0966rem;
+    .tdelTit{
+      width:100%;
+      height: px2em(130px);
+      background: #272727;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding:0 px2em(50px);
+      box-sizing: border-box;
+      @include font-dpr(16px);
+      .otit {
+        width: px2em(100px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        i {
+          color: #9e894b;
+          @include font-dpr(16px);
+        }
+      }
+
+    }
+    #tasDelBody{
+      padding:px2em(40px);
+      padding-bottom: px2em(240px);
+      overflow: scroll;
+      .tdTit{
+        width:100%;
+        border-bottom: px2em(4px) solid #9e894b;
+        img{
+          width:100%;
+          height:px2em(480px);
+        }
+        .tdodl{
+          width:100%;
+          padding:px2em(40px) 0;
+          font-weight: 600;
+          dt{
+            color:white;
+            @include font-dpr(16.6px);
+            margin-bottom: px2em(30px);
+          }
+          dd{
+            display: flex;
+            justify-content: space-between;
+            span{
+              @include font-dpr(13.3px);
+            }
+          }
+        }
+      }
+      .tdCont{
+        padding:px2em(50px) px2em(20px);
+        @include font-dpr(14px);
+        color:#7d7d7d;
+        font-family: 'yahei';
+      }
+      .botBtn{
+        width:100%;
+        position: fixed;
+        bottom: 0;
+        padding-bottom: px2em(60px);
+        display: flex;
+        justify-content: center;
+        button{
+          width:px2em(500px);
+          height:px2em(160px);
+          display: flex;
+          background: #9e894b;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          p:nth-child(1){
+            color:#262626;
+            font-weight: 600;
+            @include font-dpr(18px);
+            margin-bottom: px2em(11px);
+          }
+          p:nth-child(2){
+            color:#c6ae68;
+            font-weight: 600;
+            @include font-dpr(13px);
+          }
+        }
+      }
+      .wonderful{
+        width:10rem;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        height:px2em(160px);
+        overflow: hidden;
+        background: #9e894b;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p:nth-child(1){
+          color:#262626;
+          font-weight: 600;
+          @include font-dpr(18px);
+          //margin-bottom: px2em(11px);
+        }
+        p:nth-child(2){
+          color:#c6ae68;
+          font-weight: 600;
+          @include font-dpr(13px);
+        }
+      }
+    }
+  }
+}

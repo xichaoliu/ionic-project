@@ -1,0 +1,8 @@
+<!--主页-->
+<div class="newslist activitybox" *ngIf="actList" [style.background-image]="'url(' + actList.pic+ ')'" style="background-size:cover;">
+    <div class="activty_mask">
+        <div class="activty_label">{{actList.classifyname}}</div>
+        <div class="activty_title">{{actList.name}}</div>
+        <div class="subtitle"><span>{{actList.starttime}}</span><span>{{actList.hostnit}}</span></div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+space-list {
+  .kong{
+    width:100%;
+    height:100%;
+    background: #272727;
+    display: flex;
+    padding: px2em(30px) px2em(36px);
+    box-sizing: border-box;
+    position: relative;
+    i{
+      display: block;
+      width:px2em(10px);
+      height:px2em(80px);
+      background: #9e894b;
+      position: absolute;
+      top:px2em(30px);
+      left: px2em(-5px);
+    }
+    img{
+      margin-right: px2em(26px);
+      width:px2em(240px);
+      height:px2em(240px)
+    }
+    p{
+      color:#fff;
+      @include font-dpr(16px);
+    }
+  }
+}

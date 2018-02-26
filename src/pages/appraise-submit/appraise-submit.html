@@ -1,0 +1,23 @@
+<div class="subvalue">
+  <div class="valueTit"><i class="iconfont icon-fanhui" (tap)="toBack()"></i><span (tap)="subAppraise()">提交</span></div>
+  <div id="subValBody">
+    <ul class="vc1">
+      <li class="oli">活动质量：<nz-rate [(ngModel)]="actQuality"></nz-rate></li>
+      <li  class="oli">场地设施：<nz-rate [(ngModel)]="plaQuality"></nz-rate></li>
+      <li  class="oli">人员服务：<nz-rate [(ngModel)]="perQuality"></nz-rate></li>
+    </ul>
+    <textarea name="" id="" cols="30" rows="5" placeholder="请输入您对此次活动的评价..." [(ngModel)]="txtValue"></textarea>
+    <ul class="subImg">
+        <li *ngFor="let i of imgBox,let imgIndex = index">
+          <img src={{i.imgpath}} alt=""/>
+          <span (tap)="delet(i.id)">×</span>
+        </li>
+      <li class="lastC" *ngIf="imgBox.length<3">
+        <i class="iconfont icon-tianjiatupian"></i>
+        <p>添加图片</p>
+        <div class="oinput"><input type="file" multiple (change)="uploadFile($event)" accept="image/*" name="file"/></div>
+      </li>
+    </ul>
+  </div>
+
+</div>

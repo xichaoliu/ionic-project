@@ -1,0 +1,71 @@
+// http://ionicframework.com/docs/theming/
+ 
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,span{
+  margin:0;
+  padding:0;
+
+}
+ol,ul {
+  list-style: none;
+}
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.toast-md .toast-message{
+  @include font-dpr(12px);
+  padding: px2em(30px);
+  text-align: center;
+}
+.toast-ios .toast-message{
+  @include font-dpr(12px);
+  padding: px2em(30px);
+  text-align: center;
+}
+.content-ios{
+  background: none;
+}
+.content-md{
+  background: none;
+}
+.ion-app.ios{
+  @include font-dpr(16px);
+}
+.ion-app.md{
+  @include font-dpr(16px);
+}
+.infinite-loading-text{
+  @include font-dpr(16px);
+}
+.loading-md .loading-spinner + .loading-content{
+  @include font-dpr(10px);
+}
+.loading-md .loading-wrapper{
+  padding: px2em(10px) px2em(20px);
+}
+
+.loading-ios .loading-spinner + .loading-content{
+  @include font-dpr(10px);
+}
+.loading-ios .loading-wrapper{
+  padding: px2em(10px) px2em(20px);
+}
+.alert-ios .alert-sub-title{
+  @include font-dpr(16px);
+}
+.alert-ios .alert-head{
+  padding: px2em(25px) px2em(40px);
+}
+.toolbar-background-ios{
+  background: none !important;
+  
+}

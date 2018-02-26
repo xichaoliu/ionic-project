@@ -1,0 +1,83 @@
+map-place {
+
+  .place-item{
+    width: 9.356rem;
+    height: 2.576rem;
+    margin:0 auto;
+    margin-top: 0.322rem;
+    font-family: '宋体';
+    font-weight: bold;
+    &:first-child{
+      margin-top: 0.805rem;
+    }
+
+    .item-left{
+      width: 1.288rem;
+      height: 2.576rem;
+      float: left;
+      background: #dddddd;
+    }
+    .item-right{
+      width: 8.067rem;
+      height: 2.576rem;
+      padding-left: 1.288rem;
+      float: left;
+      background: #f2f2f2;
+      position:relative;
+      img{
+        width: 1.932rem;
+        height: 1.932rem;
+        position: absolute;
+        left: -0.966rem;
+        top: 0.322rem;
+      }
+      div.place-gps{
+        position:absolute;
+        right: px2em(96px);
+        top:0;
+        @include font-dpr(14px);
+        color:#666;
+        height: 2.576rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        div.gps-icon{
+          width: px2em(120px);
+          height: px2em(120px);
+          margin-top:px2em(30px);
+          background: url("../assets/imgs/ngt.png");
+          background-size:contain ;
+        }
+      }
+      p.place-title{
+        margin-top: px2em(50px);
+        margin-bottom: px2em(50px);
+        @include font-dpr(17px);
+        color:#4d4d4d;
+      }
+      div.place-detail{
+        width: px2em(376px);
+        height: px2em(124px);
+        display: flex;
+        justify-content: space-between;
+        p.place-detail-item{
+          width: px2em(86px);
+          height: px2em(124px);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          float:left;
+          @include font-dpr(14px);
+          color:#9e894b;
+          i{
+            margin-top:px2em(24px);
+            font-style: normal;
+            color:#656565;
+          }
+        }
+      }
+    }
+  }
+}

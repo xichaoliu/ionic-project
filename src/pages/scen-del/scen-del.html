@@ -1,0 +1,25 @@
+<div class="scen-detail">
+  <div class="scen-page-title">
+    <i class="iconfont icon-fanhui" (tap)="toBack()"></i>
+    <collect-transpond [colDel]="scenic" [type]="11" (reCollect)="reCollect($event)"></collect-transpond>
+  </div>
+  <div id="scen-body" >
+    <div id="scen-body-content" *ngIf="scenic">
+      <div class="scen-name">{{scenic.title}}</div>
+      <div class="scen-content">
+        <img class="scen-img" src={{scenic.pic}} alt="">
+        <ul class="scen-detail-list">
+          <li *ngIf="!scenic.opentime">开放时间：全天</li>
+          <li *ngIf="scenic.opentime">开放时间：{{scenic.starttime}}-{{scenic.endtime}}</li>
+          <li>门&nbsp;&nbsp;&nbsp;&nbsp;票：{{scenic.charge? '收费':'免费'}}</li>
+          <li>游览时长：约{{scenic.spendtime}}小时</li>
+          <li>景点电话：{{scenic.phone}} <a href="tel:{{scenic.phone}}"><i class="iconfont icon-dianhua"></i></a></li>
+          <li>地&nbsp;&nbsp;&nbsp;&nbsp;址：{{scenic.address}} <i class="iconfont icon-dizhi" (click)="toMap()"></i></li>
+          <li>周边交通：{{scenic.traffic}}</li>
+        </ul>
+      </div>
+      <div class="scen-description" [innerHTML]="scenic.description">
+      </div>
+    </div>
+  </div>
+</div>

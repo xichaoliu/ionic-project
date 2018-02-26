@@ -1,0 +1,33 @@
+<div class="tasteDel" *ngIf="testDel">
+  <div class="tdelTit">
+    <div class="otit" (tap)="toBack()"><i class="iconfont icon-fanhui"></i></div>
+    <collect-transpond [colDel]="testDel" [type]="10"  (reCollect)="reCollect($event)"></collect-transpond>
+  </div>
+  <div id="tasDelBody">
+    <div class="tdTit">
+      <div class="tdimg" [style.background-image]="'url(' + testDel.pic+ ')'" style="background-size:cover;">
+
+      </div>
+
+      <dl class="tdodl">
+        <dt>{{testDel.title}}</dt>
+        <dd><span>by:{{testDel.stationname}}</span><span>{{testDel.createtime}}</span></dd>
+      </dl>
+    </div>
+    <!--内容-->
+    <div class="tdCont">
+      <div id="content">
+        <div id="a1"></div>
+
+      </div>
+      <!--{{testDel.description}}-->
+    </div>
+
+    <div class="wonderful" (tap)="toTastAppSub(testDel.id,testDel.title)">
+      <!--<button >-->
+        <p>说点什么</p>
+        <p>({{appraiseNum}})</p>
+      <!--</button>-->
+    </div>
+  </div>
+</div>

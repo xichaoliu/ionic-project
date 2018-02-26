@@ -1,0 +1,81 @@
+map-active {
+  .listBox{
+    width:10rem;
+    margin:0 auto;
+    padding:px2em(40px);
+    box-sizing:border-box;
+    overflow: hidden;
+    li{
+      width:100%;
+      height:px2em(650px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border:px2em(2px) solid #9e894b;
+      border-radius: px2em(30px);
+      margin-bottom: px2em(40px);
+    }
+  }
+  .newslist{
+    width: px2em(1130px);
+    position: relative;
+  }
+  .activitybox{
+    height:4.9114rem;
+    border-radius: 0.161rem;
+  }
+  .activty_mask{
+    width: px2em(1130px);
+    height:4.9114rem;
+    border-radius: 0.161rem;
+    background:rgba(0,0,0,0.3)
+  }
+  .activty_label{
+    color:#9e894b;
+    width: 1.610rem;
+    text-align: center;
+    height: 0.789rem;
+    @include font-dpr(16px);
+    line-height: 0.789rem;
+    position: relative;
+    top: 0.5636rem;
+    background: rgba(39,39,39,0.8);
+  }
+  .activty_title{
+    color: #fff;
+    position:absolute;
+    bottom: px2em(99px);
+    padding-left:px2em(40px);
+    @include font-dpr(17.3px);
+    text-align: center;
+  }
+  .subtitle{
+    color:#9e894b;
+    position:absolute;
+    padding-left:px2em(40px);
+    bottom: px2em(34px);
+    @include font-dpr(14px);
+
+  }
+  .subtitle span{
+    margin: 0 5px;
+  }
+  .active-distance{
+    position:absolute;
+    bottom: px2em(31px);
+    right: px2em(40px);
+    z-index: 996;
+    span{
+      @include font-dpr(14px);
+      color:#9e894b;
+      margin-right: px2em(20px);
+    }
+    .nvg{
+      display: inline-block;
+      width: px2em(120px);
+      height: px2em(120px);
+      background: url("../assets/imgs/ngt.png") no-repeat;
+      background-size:contain ;
+    }
+  }
+}

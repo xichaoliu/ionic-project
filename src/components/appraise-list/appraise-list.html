@@ -1,0 +1,17 @@
+<!--评论列表-->
+<div class="appraiseBox" *ngIf="appralist">
+  <div class="userPhoto"><img src="{{appralist.profile?appralist.profile:'assets/imgs/nan.png'}}" alt=""/></div>
+  <div class="userApprai">
+    <dl class="appodl">
+      <dt>{{appralist.nickname}} <span>{{appralist.createtime}}</span></dt>
+      <dd>活动质量：<nz-rate [(ngModel)]="appralist.quality" nzDisabled [nzCount]="appralist.quality"></nz-rate></dd>
+      <dd>场地设施：<nz-rate [(ngModel)]="appralist.site" nzDisabled [nzCount]="appralist.site"></nz-rate></dd>
+      <dd>人员服务：<nz-rate [(ngModel)]="appralist.service" nzDisabled [nzCount]="appralist.service"></nz-rate></dd>
+    </dl>
+    <div class="oappCon"><p>{{appralist.content}}</p></div>
+    <div class="oappImg" *ngIf="appralist.pics">
+      <img src={{i.pic}} alt="" *ngFor="let i of appralist.pics"/>
+    </div>
+  </div>
+</div>
+

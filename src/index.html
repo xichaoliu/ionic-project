@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ionic App</title>
+  <!--允许全屏-->
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+  <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <!--<link rel="stylesheet" type="text/css" href="assets/core/reset.scss">-->
+  <link rel="stylesheet" type="text/css" href="assets/icon_css/iconfont.css">
+  <meta name="theme-color" content="#4e8ef7">
+
+  <!-- add to homescreen for ios -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- cordova.js required for cordova apps (remove if not needed) -->
+  <script src="cordova.js"></script>
+  <!--百度地图-->
+  <script type="text/javascript" src="assets/ckplayer/ckplayer.js"></script>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=H3ICfVuQXnV5ARTiy0HTk8SvFF6Rp1dT"></script>
+  <!--高德地图-->
+  <!--<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.2&key=032042080072b32207476dcdb7453a6c"></script>-->
+  <!-- un-comment this code to enable service worker
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+    }
+  </script>-->
+
+  <link href="build/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.css">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.js"></script>
+</head>
+<body>
+
+  <!-- Ionic's root component and where the app will load -->
+  <ion-app></ion-app>
+
+  <!-- The polyfills js is generated during the build process -->
+  <script src="build/polyfills.js"></script>
+
+  <!-- The vendor js is generated during the build process
+       It contains all of the dependencies in node_modules -->
+  <script src="build/vendor.js"></script>
+
+  <!-- The main bundle js is generated during the build process -->
+  <script src="build/main.js"></script>
+</body>
+<!--<script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>-->
+<!--<script type="text/javascript">-->
+  <!--$youziku.load("body,.newslist,.body", "251e8af0efeb4fa0ac2521cfc96de2b3", "SourceHanSerif-B");-->
+  <!--/*$youziku.load("#id1,.class1,h1", "251e8af0efeb4fa0ac2521cfc96de2b3", "SourceHanSerif-B");*/-->
+  <!--/*．．．*/-->
+  <!--$youziku.draw();-->
+<!--</script>-->
+
+</html>

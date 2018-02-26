@@ -1,0 +1,40 @@
+page-guanzhu {
+    .msg_box{
+        height: 100%;
+        width: 100%;
+        font-weight: bold;
+    }
+    .redelTit {
+       width: 100%;
+       height: px2em(130px);
+       display: flex;
+       font-weight: 600;
+       justify-content: center;
+       align-items: center;
+       position: relative;
+       background: #272727;
+      .otit {
+        width: px2em(100px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        position: absolute;
+        left: px2em(50px);
+        i {
+          color: #9e894b;
+          @include font-dpr(16px);
+        }
+      }
+     }
+     .redelTit span{
+         color: #9e894b;
+         @include font-dpr(16px);
+     }
+     .msg_list{
+       display: flex;
+       flex-direction: column;
+       justify-content:space-around;
+       align-items: center;
+     }
+}

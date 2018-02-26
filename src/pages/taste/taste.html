@@ -1,0 +1,21 @@
+<div id="tasteBox">
+  <div class="meTbox">
+    <div class="tastTit"><button (tap)="showMeng()">类 别</button></div>
+    <!--分类蒙版-->
+    <div id="navTit">
+      <ul class="meng">
+        <li *ngFor="let i of tasteNav" (tap)="getClassList(i.id)">{{i.name}}</li>
+      </ul>
+    </div>
+  </div>
+  <ul class="tasteList">
+    <li (tap)="toTastDel(i.id)" *ngFor="let i of tasteList">
+      <see-hear [tasteList]="i"></see-hear>
+    </li>
+    <p class="loadtxt">{{msg}}</p>
+  </ul>
+</div>
+<ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles"
+                                 loadingText="数据加载中..."></ion-infinite-scroll-content>
+  </ion-infinite-scroll>

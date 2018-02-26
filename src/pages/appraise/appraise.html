@@ -1,0 +1,9 @@
+<!--精彩点评-->
+<div class="appraise">
+  <div class="appraTit"> <div class="otit" (tap)="toBack()"><i class="iconfont icon-fanhui"></i></div>精彩点评</div>
+  <ul id="appraiseBody">
+    <li *ngFor="let i of appraise">
+      <appraise-list [appralist]="i"></appraise-list>
+    </li>
+  </ul>
+</div>

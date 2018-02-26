@@ -1,0 +1,25 @@
+<div class="actOnlineBox" >
+  <div class="onlineTit">
+    <div class="textbox">
+        <span>活<br/>动<br/>在<br/>线<br/></span>
+        <span class="tx">Activity Online</span>
+    </div>
+  </div>
+  <div classs="oimg">
+    <div id="online" class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let i of liveList" (tap)="toActDel(i.id)">
+          <div class="online_box"><img src="{{i.pic}}" class="online_video"></div>
+           
+          <div class="online_boxtitle">{{i.name}}</div>
+        </div>
+        <div class="swiper-slide addlive" *ngIf="liveList.length==1">
+             <img src="../assets/imgs/live.png">
+        </div>
+         
+    
+      </div>
+      
+    </div>
+  </div>
+</div>

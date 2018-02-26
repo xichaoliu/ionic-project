@@ -1,0 +1,17 @@
+<!--直播现场-->
+<div class="video" *ngIf="videoDel">
+  <div class="videoTit"><div class="otit" (tap)="toBack()"><i class="iconfont icon-fanhui"></i></div>直击现场</div>
+  <div class="videoImg">
+    <div id="live_video"></div>
+
+    <dl class="videoOdl">
+      <dt>{{videoDel.name}}</dt>
+      <dd>{{videoDel.hostnit}}</dd>
+    </dl>
+  </div>
+
+  <div class="videoNum">
+    <p>{{videoDel.online}}<span>人观看</span></p>
+    <i class="iconfont icon-fenxiang" ></i>
+  </div>
+</div>

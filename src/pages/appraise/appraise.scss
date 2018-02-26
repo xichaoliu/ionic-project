@@ -1,0 +1,38 @@
+page-appraise {
+  .appraise{
+    width:10rem;
+    margin:0 auto;
+    font-family: '宋体';
+    height:100%;
+    color:#9e894b;
+    background: url("../assets/imgs/2.png") repeat;
+    background-size: 0.0966rem 0.0966rem;
+    .appraTit{
+      width:100%;
+      height: px2em(130px);
+      background: #272727;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      @include font-dpr(16px);
+      position: relative;
+      .otit {
+        width: px2em(100px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        position: absolute;
+        left: px2em(50px);
+        i {
+          color: #9e894b;
+          @include font-dpr(16px);
+        }
+      }
+    }
+    #appraiseBody{
+      overflow: scroll;
+    }
+  }
+}

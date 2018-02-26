@@ -1,0 +1,24 @@
+
+ <div class="top_header" *ngIf='memsg'>
+    <div class="top_setting">
+      <i class="iconfont icon-shezhi" (tap)="open_setting()"></i><i class="iconfont icon-xiaoxi" (tap)="open_msg()"></i>
+    </div>
+    <div class="top_head">
+        <div class="touxiang" (tap)="open_perfect()">
+          <img src="{{memsg.profile?memsg.profile:'assets/imgs/nan.png'}}">
+        </div>
+
+        <div class="nickname">
+          <h2>{{memsg.nickname?memsg.nickname:'新用户'}}</h2>
+        </div>
+    </div>
+ </div>
+ <div class="me_center">
+   <div class="me_line" (tap)="open_guanzhu()"> 关注  <span>Attention</span></div>
+   <div class="me_line" (tap)="open_orderlist()">我的参与<span>My participation</span></div>
+   <div class="me_line" (tap)="open_shoucangjia()">收藏夹<span>Favorites</span></div>
+   <div class="me_line">分享APP<span>Share App</span></div>
+   <div class="me_line" (tap)="open_yijian()">意见及建议<span>Opinions & Suggestions</span></div>
+   <div class="me_line" (tap)="open_about()">关于我们<span>About us</span></div>
+ </div>
+

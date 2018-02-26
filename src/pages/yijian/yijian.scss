@@ -1,0 +1,59 @@
+page-yijian {
+    .msg_box {
+        height: 100%;
+        width: 100%;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .msg_back {
+        width: 100%;
+    }
+    .redelTit {
+        width: 100%;
+        height: px2em(130px);
+        display: flex;
+        font-weight: 600;
+        justify-content: space-between;
+        align-items: center;
+        background: #272727;
+        padding:0 px2em(50px);
+        box-sizing: border-box;
+        .otit {
+          width: px2em(100px);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 100%;
+          i {
+            color: #9e894b;
+            @include font-dpr(16px);
+          }
+        }
+        span {
+          color: #9e894b;
+          @include font-dpr(16px);
+        }
+        span:nth-child(3){
+          color:#fff;
+        }
+    }
+    .yijianbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .yijianinput{
+        width: px2em(1162px);
+        textarea{
+            background: #9e894b;
+            color: #554c28;
+            width: 100%;
+            @include font-dpr(14px);
+            padding: px2em(20px);
+            height: px2em(800px);
+            margin-top:px2em(40px);
+        }
+    }
+}

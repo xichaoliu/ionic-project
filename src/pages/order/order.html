@@ -1,0 +1,21 @@
+
+<div class="body">
+<div class="actDetail">
+<div class="msg_box">
+    <div class="msg_back">
+        <div class="redelTit">
+          <i class="iconfont icon-fanhui" (tap)="toBack()"></i>
+          <span>我的参与</span>
+        </div>
+
+     </div>
+    <ion-content>
+     <div *ngIf="orderlsit">
+      <div *ngFor="let item of orderlsit">
+          <orderlist [orderlist]='item'></orderlist>
+      </div>
+      </div>
+    </ion-content>
+</div>
+</div>
+</div>

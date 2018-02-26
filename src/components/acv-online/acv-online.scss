@@ -1,0 +1,81 @@
+acv-online {
+    .actOnlineBox {
+        width: 10rem;
+        overflow: hidden;
+        height: 4.30rem;
+        display: flex;
+        margin: 0 auto;
+        margin-bottom: px2em(70px);
+   
+        .onlineTit {
+            width: 2rem;
+            text-align: center;
+            @include font-dpr(18px);
+            color: #fff;
+        }
+    }
+    .textbox {
+        margin-left: 0.604rem;
+        margin-top: 1.10rem;
+    }
+    .onlineTit span {
+        float: left;
+        margin: 0 2px;
+    }
+    .tx {
+        writing-mode: tb-rl;
+        letter-spacing:-1px;
+        padding-top:px2em(5px);
+        color: #9e894b;
+        @include font-dpr(14px);
+    }
+    .oimg {
+        width: 8rem;
+        background: blue;
+        float: left;
+    }
+    #online {
+        width: 8rem;
+        height: 4.67rem;
+    }
+    #online .swiper-slide {
+        width: 3.33rem !important;
+        height: 4.21rem;
+        border-bottom: 0.05rem solid #9e894b;
+        margin-right: 0.322rem !important;
+        background: #272727;
+        /* Center slide text vertically */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .online_box {
+        max-width: 2.27rem;
+        height: 2.27rem;
+        margin-top:px2em(53px);
+    }
+    .online_box .online_video {
+        max-width: 2.27rem !important;
+        height: 2.27rem !important;
+        margin: auto;
+        border-radius: 50%;
+        border: 0.008rem solid #9e894b;
+    }
+    .online_boxtitle {
+        text-align: left;
+        width: 2.85rem;
+        @include font-dpr(14.6px);
+        @include line-height(16px);
+        color: #989898;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        
+    }
+    .addlive img{
+        width: 100%;
+        height: 100%;
+    }
+}

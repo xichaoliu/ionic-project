@@ -1,0 +1,35 @@
+
+<div class="body">
+  <div *ngIf="!s5">
+    <div class="h_con">
+      <div class="headleft" (tap)="showHide()">
+        <div id="select" >
+          <div id="selOpt">
+            <span id="selectedOption">{{selOpt}}</span>
+          </div>
+        </div>
+      </div>
+      <div  class="head headcenter">
+        <div class="search" (tap)="search()">
+            <i class="iconfont icon-sousuo"></i>
+        </div>
+      </div>
+      <div class="head headright" (tap)='open_msgbox()'><i class="iconfont icon-xiaoxi"></i></div>
+    </div>
+  </div>
+  <div class="con" id="cont">
+      <ion-content>
+    <page-culture *ngIf="s1 || s2" (showTast)="isShow($event)"></page-culture>
+    <page-activity *ngIf="s3"></page-activity>
+    <page-taste *ngIf="s4"></page-taste>
+    <page-me *ngIf="s5" [islogin]="islogin" [upmemsg]="memsg"></page-me>
+      </ion-content>
+  </div>
+    <div class="tabs">
+      <div [class]="s1? 'colo col': 'col'" tappable  (tap)="culShow()"><span class="indexcolor"> 首页</span>  <span class="indextext">Home</span> </div>
+      <div [class]="s2? 'colo col': 'col'" tappable  (tap)="mapShow()"><span class="indexcolor"> 地图 </span> <span class="indextext">Map</span> </div>
+      <div [class]="s3? 'colo col': 'col'" tappable  (tap)="activeShow()"><span class="indexcolor"> 活动</span> <span class="indextext">Activity</span> </div>
+      <div [class]="s4? 'colo col': 'col'" tappable  (tap)="tasteShow()"><span class="indexcolor"> 品味</span> <span class="indextext">Taste</span> </div>
+      <div [class]="s5? 'colo col': 'col'" (click)="meShow()"><span class="indexcolor"> 我</span> <span class="indextext">Me</span> </div>
+    </div>
+</div>

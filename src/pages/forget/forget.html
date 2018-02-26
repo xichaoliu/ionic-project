@@ -1,0 +1,41 @@
+
+<!--<ion-content>-->
+<div class="loginbox hide-on-keyboard-open">
+  <div class="loginmask">
+      <div class="loginclose"  (click)="visitor()"><i class="iconfont icon-xianguangjiantou"></i> 闲 逛</div>
+      <div class="logincenter">
+        <div class="logininput">
+
+          <div class="line m-10">
+              <input type="text" placeholder="手机号" [(ngModel)]="phoneValue">
+            </div>
+            <div class="line m-10 addcode">
+                <input type="text" placeholder="验证码" [(ngModel)]="codeValue">
+                <div class="code codeFor" (tap)="sendCodeF()">获取</div>
+            </div>
+          <div class="line m-10">
+              <input type="password" placeholder="密码" [(ngModel)]="pwValue">
+          </div>
+          <div class="line m-10">
+            <input type="password" placeholder="重复密码" [(ngModel)]="rePwValue">
+        </div>
+          <div class="loginok addbg">
+            <div class="logintxt" (tap)="changeWord()">
+                确&emsp;定
+            </div>
+
+          </div>
+          <div class="loginok addok">
+            <div class="logintxt" (tap)="toLogin()">
+                返回登录
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+  </div>
+</div>
+
+<!--</ion-content>-->

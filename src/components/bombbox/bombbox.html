@@ -1,0 +1,99 @@
+<!--信息弹出框-->
+<div class="body">
+<div class="popMess">
+    <!--修改密码-->
+    <div class="messBox" *ngIf="id==1">
+         <div class="bgbox">
+            <div class="bombbox margin88">
+                <div class="messTit">
+                    <p>请输入密码</p>
+                  </div>
+               <div class="codeinput">
+                <input type="password" placeholder="原密码" [(ngModel)]="primValue">
+               </div>
+               <div class="codeinput">
+                  <input type="password" placeholder="新密码" [(ngModel)]="newValue">
+                 </div>
+                 <div class="codeinput">
+                    <input type="password" placeholder="确认密码" [(ngModel)]="reValue">
+                   </div>
+            </div>
+
+            <div class="bomok" (tap)="changPW()">
+              确定
+            </div>
+        </div>
+        <div class="closebomb" (tap)="toBack()">
+            <i class="iconfont icon-pinglunshanchutupian"></i>
+        </div>
+    </div>
+    <!--修改手机号-->
+    <div class="messBox" *ngIf="id==0">
+         <div class="bgbox">
+              <div class="bombbox" >
+                <div class="bombline"><span>原号码：</span><input type="text" [(ngModel)]="primePhone" maxlength="11"></div>
+                <div class="bombline"><span>新号码：</span><input type="text" [(ngModel)]="newPhone" maxlength="11"></div>
+                <div class="bombline addborder"><span>验证码：</span><input type="text" [(ngModel)]="phoneCode"><div class="sendcode" (tap)="sendCode()">获取</div></div>
+            </div>
+
+            <div class="bomok" (tap)="changPhone()">
+              确定
+            </div>
+        </div>
+        <div class="closebomb" (tap)="toBack()">
+            <i class="iconfont icon-pinglunshanchutupian"></i>
+        </div>
+    </div>
+    <!--清理缓存-->
+    <div class="messBox" *ngIf="id==2">
+      <div class="popMess2">
+          <div class="messBox2">
+            <div class="messTit">
+              <p>提示</p>
+              <p>您确定要清除所有缓存吗？</p>
+            </div>
+            <div class="messBtn">
+              <p (tap)="toBack()">取消</p>
+              <p  (tap)="toReserDel()">确定</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  <!--退出登录-->
+    <div class="messBox" *ngIf="id==3">
+      <div class="popMess2">
+        <div class="messBox2">
+          <div class="messTit">
+            <p>提示</p>
+            <p>您确定要退出登录吗？</p>
+          </div>
+          <div class="messBtn">
+            <p (tap)="toBack()">取消</p>
+            <p  (tap)="toTuiChu()">确定</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--修改手机号前 确认密码-->
+    <div class="messBox" *ngIf="id==4">
+        <div class="bgbox">
+          <div class="bombbox margin88">
+            <div class="messTit">
+              <p>请输入密码</p>
+            </div>
+            <div class="codeinput">
+              <input type="password" [(ngModel)]="checkPwValue">
+            </div>
+          </div>
+          <div class="bomok" (tap)="checkPW()">
+            确定
+          </div>
+      </div>
+      <div class="closebomb" (tap)="toBack()">
+        <i class="iconfont icon-pinglunshanchutupian"></i>
+      </div>
+  </div>
+  </div>
+
+</div>
+

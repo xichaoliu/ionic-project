@@ -1,0 +1,52 @@
+<!--修改信息-->
+<div class="body">
+    <div class="msg_box">
+        <div class="msg_back">
+          <div class="redelTit">
+            <i class="iconfont icon-fanhui" (tap)="toBack()"></i>
+            <span>编辑资料</span>
+            <span class="save" (tap)="subInfor()">保存</span>
+          </div>
+        </div>
+        <div class="perfectbox">
+          <div class="perfectcenter">
+              <div class="perfectline">
+                  <span>头像</span>
+                  <div class="tou"><img src="{{porPath?porPath:'assets/imgs/nan.png'}}" class="oimg"/><input type="file" multiple (change)="uploadFile($event)" id="t4" accept="image/*" name="file"/></div>
+                </div>
+          </div>
+          <div class="perfectcenter">
+              <div class="perfectline">
+                  <span>昵称</span>
+                  <div class="perfectinput">
+                    <input type="text" placeholder="生活卡" maxlength="6" [(ngModel)]="nickname"/>
+                  </div>
+                </div>
+          </div>
+          <div class="perfectcenter">
+              <div class="perfectline">
+                  <span>性别</span>
+                  <div class="perfectinput nowidth">
+                      <label for="sex-man" class="radio_label">
+                          <input type="radio" [(ngModel)]="sexName" value="1" checked="checked" id="sex-man" name="sex" />
+                          男
+                        </label>
+                        <label for="sex-female" class="radio_label">
+                          <input type="radio" [(ngModel)]="sexName" value="2" id="sex-female" name="sex" />
+                          女
+                        </label>
+
+                  </div>
+                </div>
+          </div>
+          <div class="perfectcenter noborder">
+              <div class="perfectline ">
+                  <span>生日</span>
+                  <div class="perfectinput">
+                    <input type="date" [(ngModel)]="myDate" id="datetime"/>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div>
+</div>
