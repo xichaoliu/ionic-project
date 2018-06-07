@@ -30,6 +30,8 @@ export class ActOnlinePage {
 
   ionViewDidLoad() {
     // console.log(this.title);
+
+    
     let div;
     if(this.title == 0){
        div = document.getElementById('onlineBox');
